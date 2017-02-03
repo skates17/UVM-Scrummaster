@@ -1,6 +1,6 @@
 # PHP MySQL Hackathong Edition Starter Overview
 
-The PHP Starter demonstrates a simple, reusable PHP web application.
+The PHP Starter demonstrates a simple, reusable PHP web application with MySQL Support.
 
 ## Run the app locally
 
