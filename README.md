@@ -1,4 +1,4 @@
-# PHP Starter Overview
+# PHP MySQL Hackathong Edition Starter Overview
 
 The PHP Starter demonstrates a simple, reusable PHP web application.
 
