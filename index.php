@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +13,11 @@
 				<img class = 'newappIcon' src='images/newapp-icon.png'>
 			</td>
 			<td>
-				<h1 id = "message"><?php echo "Hello World!"; ?></h1>
-				<p class='description'></p> Thanks for creating a <span class="blue">PHP + MySQL Starter Application</span>.
+				<h3 id = "message"><?php echo "Hello World!"; ?></h3>
+				<p>Look at the PHP <a href="info.php">info</a>.</p>
+				<p>Edit the <a href="messages.php">messages</a>.</p>
+				<p><a href="init.php">Initialize the db </a>.</p>
+				<p> Thanks for creating a <span class="blue">PHP + MySQL Starter Application</span>.</p>
 			</td>
 		</tr>
 	</table>
