@@ -63,8 +63,8 @@
           <h2>Weather API</h2>
           <p>
           This application uses the Weather API to get the current conditions for a specific location (specified
-          by a lat and lon value).  Currently this value is hard coded in the app.  In a real life application
-          this value would be either computed or pulled from a table mapped to user friendly names.
+          by a US zip code).  The app makes a REST call to the weather server and displays only some of the 
+          information on the page. 
           </p>
           <p><a class="btn btn-default" href="weather.php" role="button">View current weather &raquo;</a></p>
        </div>
