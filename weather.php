@@ -32,7 +32,7 @@ if( $vcap_services_str ) {
 
 } else {
 	// no vcap found.  
-	echo '<div class="alert alert-warning" role="alert">';
+	echo '<div class="alert alert-danger" role="alert">';
 	echo '<strong>Error:</strong> No VCAP Services file found';
 	echo '</div>';
 	die();
@@ -44,6 +44,10 @@ $zip = '18964';
 if ($_SERVER["REQUEST_METHOD"] == "POST") { // get weather for zip code
 	if( is_numeric ( $_POST["zip"] )  ) {
 		$zip = sprintf('%05u', $_POST["zip"]);
+	} else {
+		echo '<div class="alert alert-warning" role="alert">';
+		echo '<strong>' . $_POST["zip"] . '</strong> is not a valid US zip code.  Using default zip.';
+		echo '</div>';
 	}
 }
 

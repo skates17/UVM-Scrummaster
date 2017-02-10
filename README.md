@@ -1,14 +1,19 @@
 # PHP MySQL Hackathong Edition Starter Overview
 
-The PHP Starter demonstrates a simple, reusable PHP web application with MySQL Support.
+Author: _jim conallen, jconallen@us.ibm.com_
 
-## Run the app locally
+Last Modified: _10-Feb, 2017_
 
-1. Download and extract [PHP][]
-2. Add the extracted directory to your PATH environment variable
-3. Download and extract the starter code from the Bluemix UI
-4. cd into the app directory
-5. Run `php -S localhost:8000` to start the app using the built-in development web server
-6. Access the running app in a browser at http://localhost:8000
+## Overview
 
-[PHP]: http://php.net/downloads.php
+This PHP Starter demonstrates a simple, reusable PHP web application with MySQL Support.  The app
+uses a database to store simple TODO items, and has a page that displays the current weather
+conditions for a given zip code.  This code assumes it is deployed to Bluemix, and that services for
+MySQL (ClearDB or the Experimental MySQL) and Weather Insights have already been provisioned for 
+the app.
+
+## Deployment Options
+
+https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FPHP-MySQL-Hackathon-Example)
+
+

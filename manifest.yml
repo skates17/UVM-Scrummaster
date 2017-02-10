@@ -1,3 +1,10 @@
+declared-services: 
+	ClearDB-ph: 
+		label: cleardb 
+		plan: spark 
+	Weather Company Data-ph: 
+		label: weatherinsights 
+		plan: Free-v2 
 applications:
 - path: .
   memory: 128M
@@ -6,3 +13,6 @@ applications:
   name: PHP MySQL Hackathon Example
   host: PHP-MySQL-Hackathon-Example
   disk_quota: 1024M
+  - services
+    - ClearDB-ph
+    - Weather Company Data-ph
