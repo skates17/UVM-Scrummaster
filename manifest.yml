@@ -7,7 +7,7 @@ applications:
   name: PHP MySQL Hackathon Example
   host: PHP-MySQL-Hackathon-Example
   disk_quota: 1024M
-  - services
+  services:
     - ClearDB-ph
     - Weather Company Data-ph
 declared-services: 
