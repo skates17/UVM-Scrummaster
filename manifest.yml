@@ -10,7 +10,7 @@ applications:
   services:
     - ClearDB-ph
     - Weather Company Data-ph
-declared-services: 
+- declared-services: 
 	ClearDB-ph: 
 		label: cleardb 
 		plan: spark 
