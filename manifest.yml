@@ -1,12 +1,4 @@
 ---
-declared-services: 
-	ClearDB-ph: 
-		label: cleardb 
-		plan: spark 
-	Weather Company Data-ph: 
-		label: weatherinsights 
-		plan: Free-v2 
-
 applications:
 - path: .
   memory: 128M
