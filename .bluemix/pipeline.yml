@@ -28,5 +28,5 @@ stages:
       #!/bin/bash
       cf create-service cleardb spark "ClearDB-ph"
       cf create-service weatherinsights Free-v2 "Weather Company Data-ph"
-      cf push "${CF_APP}"
+      cf push "${CF_APP}" --random-route
 
