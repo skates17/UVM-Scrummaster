@@ -14,6 +14,8 @@ the app.
 
 ## Deployment Options
 
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FPHP-MySQL-Hackathon-Example)
+
 [![Deploy to Bluemix](https://developer.ibm.com/devops-services/wp-content/uploads/sites/42/2016/05/create_toolchain_button.png)](https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FPHP-MySQL-Hackathon-Example)
 
 
