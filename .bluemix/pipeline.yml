@@ -1,0 +1,44 @@
+---
+stages:
+- name: Build Stage
+  inputs:
+    type: git
+    branch: master
+  triggers:
+  - type: commit
+  jobs:
+  - name: Build
+    type: builder
+    artifact_dir: ''
+- name: Deploy Stage
+  inputs:
+  - type: job
+    stage: Build Stage
+    job: Build
+  triggers:
+  - type: stage
+  jobs:
+  - name: Create Services
+    type: deployer
+    target:
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
+      application: ${CF_APP}
+    script: |
+      #!/bin/bash
+      cf create-service cleardb spark "ClearDB-ph"
+      cf create-service weatherinsights Free-v2 "Weather Company Data-ph"
+  - name: Deploy App
+    type: deployer
+    target:
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
+      application: ${CF_APP}
+    script: |-
+      #!/bin/bash
+      cf push "${CF_APP}"
+hooks:
+- enabled: true
+  label: null
+  ssl_enabled: false
+  url: https://devops-api.ng.bluemix.net/v1/messaging/webhook/publish
