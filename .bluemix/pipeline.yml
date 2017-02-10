@@ -2,7 +2,7 @@
 stages:
 - name: Build Stage
   inputs:
-    type: git
+  - type: git
     branch: master
   triggers:
   - type: commit
