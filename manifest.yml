@@ -1,3 +1,4 @@
+---
 declared-services: 
 	ClearDB-ph: 
 		label: cleardb 
