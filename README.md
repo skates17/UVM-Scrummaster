@@ -1,4 +1,4 @@
-# PHP MySQL Hackathong Edition Starter Overview
+# PHP MySQL Hackathon Example
 
 Author: _jim conallen, jconallen@us.ibm.com_
 
@@ -6,11 +6,17 @@ Last Modified: _10-Feb, 2017_
 
 ## Overview
 
-This PHP Starter demonstrates a simple, reusable PHP web application with MySQL Support.  The app
+This PHP example app demonstrates a simple, reusable PHP web application with MySQL Support.  The app
 uses a database to store simple TODO items, and has a page that displays the current weather
-conditions for a given zip code.  This code assumes it is deployed to Bluemix, and that services for
+conditions for a given zip code.  
+
+This code assumes it is deployed to Bluemix, and that services for
 MySQL (ClearDB or the Experimental MySQL) and Weather Insights have already been provisioned for 
-the app.
+the app.  If you deployed this app to your Bluemix and GitHub space with the Deploy to Bluemix Toochain 
+button the necessary deployment pipeline will take care of service creation for you.  
+
+If you just forked this project from GitHub, you will need to make sure that the services for
+MySQL and Weather Insights are created before you push the code to Bluemix.  
 
 ## Deployment Options
 

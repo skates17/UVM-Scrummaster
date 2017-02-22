@@ -75,10 +75,12 @@
       <footer>
         <p>&copy; 2017 IBM Corporation</p>
         <p>
+        <a href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FPHP-MySQL-Hackathon-Example"
         <button type="submit" class="btn btn-primary">
         	<img style="width:20px;height:20px;" src="./images/IBM_Bluemix_logo.svg.png">
   			Deploy to Bluemix Toolchain
 		</button>
+		</a>
         </p>
       </footer>
     </div> <!-- /container -->

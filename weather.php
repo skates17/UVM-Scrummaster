@@ -102,6 +102,7 @@ $windDirection = $conditions->{"wdir_cardinal"};
 
 <div class="container">
 	<button type="button" class="btn btn-link" onclick="window.location = 'index.php';">Home</button>
+	<h1>Example Weather API Page</h1>
 </div>
 
 <div class="container">
