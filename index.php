@@ -25,7 +25,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="Jim Conallen">
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="icon" href="./images/bluemix_icon.png">
 
     <title>PHP MySQL Hackathon Example - Home</title>
 
@@ -91,7 +91,7 @@
       <footer>
         <p>&copy; 2017 IBM Corporation</p>
         <p>
-        <a target="_blank" href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FPHP-MySQL-Hackathon-Example"
+        <a target="_blank" href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FPHP-MySQL-Hackathon-Example">
         <button type="submit" class="btn btn-primary">
         	<img style="width:20px;height:20px;" src="./images/IBM_Bluemix_logo.svg.png">
   			Deploy to Bluemix Toolchain
