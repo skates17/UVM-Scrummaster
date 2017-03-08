@@ -25,9 +25,9 @@ if(!$vcap_services_str){ // local dev env
 	// try to load local copy of vcap services environment variable.  This will 
 	// set the services credentials to be the bluemix ones. Unlike the db version
 	// we don't have a local option, so there must always be a file
-    if( file_exists("PHP MySQL Hackathon Example_vcap.json") ) {
-    	$vcapfile = fopen("PHP MySQL Hackathon Example_vcap.json", "r") or die("Unable to open file!");
-    	$vcap_services_str = fread($vcapfile,filesize("PHP MySQL Hackathon Example_vcap.json"));
+    if( file_exists("vcap.json") ) {
+    	$vcapfile = fopen("vcap.json", "r") or die("Unable to open file!");
+    	$vcap_services_str = fread($vcapfile,filesize("vcap.json"));
     	fclose($vcapfile);
     } 
     
