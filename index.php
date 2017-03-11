@@ -59,9 +59,6 @@
         This page is based off the <a href="http://getbootstrap.com/examples/jumbotron/">Jumbotron Bootstrap template</a>.
         It is useful for a big opening splash of a home page.
         </p>
-        <p>
-        Place an advertisement for your app here.
-        </p>
 
       </div>
     </div>
