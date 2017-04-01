@@ -27,7 +27,7 @@
     <meta name="author" content="Jim Conallen">
     <link rel="icon" href="./images/bluemix_icon.png">
 
-    <title>PHP MySQL Hackathon Example - Home</title>
+    <title>PHP MySQL Hackathon Example - MICHAEL CHANGE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -54,12 +54,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-<<<<<<< HEAD
-        <h1>PHP, MySQL  SEANS CHANGE and Weather, ram.</h1>
-        <h2> Change</h2>
-=======
         <h1>PHP, MySQL and Weather, oh my.</h1>
->>>>>>> 9e15e448f0823e0c074de9bf1f46e92c97e49a32
         <p>
         This page is based off the <a href="http://getbootstrap.com/examples/jumbotron/">Jumbotron Bootstrap template</a>.
         It is useful for a big opening splash of a home page.
