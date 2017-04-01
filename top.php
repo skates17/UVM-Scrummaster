@@ -38,6 +38,9 @@ include "lib/constants.php";
         $dbUserName = get_current_user() . '_reader';
         $whichPass = "r"; //flag for which one to use.
         $dbName = DATABASE_NAME;
+        
+        //print $dbUserName;
+       // print $dbName;
 
         $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 

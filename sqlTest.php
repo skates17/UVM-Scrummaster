@@ -32,6 +32,10 @@ function ldapName($uvmID) {
 }
 $NetId = htmlentities($_SERVER["REMOTE_USER"], ENT_QUOTES, "UTF-8");
 
+setcookie("netId" ,$NetId,time()+(60*60*24*1),'/');
+
+//$pmkUsername = $_COOKIE["netId"];
+
 $query3 = "SELECT pmkPlanId, `fnkStudentNetId`,`fldStudentDegree`FROM tblPlans WHERE fnkStudentNetId ='". $NetId ."' ;";
     $thePlans = $thisDatabaseReader->select($query3, "", 1, 0, 2, 0, false, false);
     foreach ($thePlans as $aPlan) {

@@ -1,9 +1,10 @@
 
 <?php 
+include "top.php";
 $b="SELECT pmkPostId, fnkUsername, fldPhoto, fldPrice, fldComment,fldLocation";
-$query.=" FROM tblForum";
+$b.=" FROM tblForum";
 $data=array($b);
-$info=$thisDatabaseReader->select($query,$data,1,0,0,0, false,false);
+$info=$thisDatabaseReader->select($b,$data,0,0,0,0, false,false);
 
 foreach($info as $arrayRec){
 	print '<div class="forumPost">';
