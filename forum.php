@@ -22,7 +22,7 @@ print'<div class="row">';
 					print'<h4 class = "description">Description:</h4>';
 							print'<p>'.$arrayRec['fldComment'].'</p>';
 					print'<div class="card-action">';
-						print'<a class="price">'.$arrayRec['fldPrice'].'</a>';
+						print'<a class="price"> $'.$arrayRec['fldPrice'].'</a>';
 						print'<a class="location">'.$arrayRec['fldLocation'].'</a>';
 					print'</div>';
 				print'</div>';
