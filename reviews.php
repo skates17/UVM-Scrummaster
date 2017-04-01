@@ -267,7 +267,7 @@ if (isset($_POST["btnSubmit"])) {
         }
         
         $status="";
-        if ($style=='Passenger'){
+        if ($style=='Cleanee'){
             $status='1';
         }
         elseif($style=='Cleaner'){
@@ -404,15 +404,15 @@ if (isset($_POST["btnSubmit"])) {
           method="post">
                 <fieldset class="radio">
                     <legend>Preference</legend>
-                    Are you Reviewing the Cleaner or Passenger?
+                    Are you Reviewing the Cleanee or Cleaner?
         
                             <br>
                             <label class="rad"><input type="radio"
                                           class="radType"
                                           name="radType"
-                                          value="Passenger"
-                                          <?php if ($style == "Passenger") print 'checked' ?>
-                                          tabindex="330"/>Passenger</label>
+                                          value="Cleanee"
+                                          <?php if ($style == "Cleanee") print 'checked' ?>
+                                          tabindex="330"/>Cleanee</label>
                             <label class="rad"><input type="radio"
                                           class="radType"
                                           name="radType"
