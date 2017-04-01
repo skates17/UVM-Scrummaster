@@ -68,7 +68,12 @@
     <div class="container">
       <div class="row">
         <?php
-          include $_GET[0] . ".php";
+          if (isset($_GET['Page'])) {
+            include $_GET['Page'] . ".php";
+          } else {
+            include "forum.php";
+          }
+          
         ?>
       </div>
     </div> <!-- !End Container>
