@@ -27,11 +27,27 @@ foreach($info as $arrayRec){
 					print'<a class="price"> $'.$arrayRec['fldPrice'].'</a>';
 					print'<a class="location truncate">'.$arrayRec['fldLocation'].'</a>';
 				print'</div>';
+                                print '<form method ="POST" class="col s12">';
+                                print '<button class="btn waves-effect waves-light btn-sml" type="submit" name="action">Text';
+                                print '<i class="material-icons right">send</i>';
+                               
+        
+               
+                                print '</button>';
+                                print '</form>';
 			print'</div>';
 		print'</div>';
 	print'</div>';
 //print'</div>';
+        
+} 
+if (isset($_POST['action'])){
+                        $to =  "5854902358@vtext.com";
+                            $from = "PigPen";
+                            $message = "Someone is interested in cleaning your room at 4pm today for $".$arrayRec['fldPrice'].'';
+                            $headers = "From: $from\n";
+                            mail($to, '', $message, $headers);
 }
-
 ?>
+                    
 <a href="?Page=servicePostForm" class="btn">Add Post</a>

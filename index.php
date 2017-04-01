@@ -39,8 +39,6 @@
         ?>
       </div>
     </div> <!-- !End Container>
-    
-
 	
 	<!-- Bootstrap core JavaScript
     ================================================== -->

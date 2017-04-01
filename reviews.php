@@ -398,6 +398,48 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
+<<<<<<< HEAD
+    <form id="frmRegister"
+          method="post">
+                <fieldset class="radio">
+                    <legend>Preference</legend>
+                    Are you Reviewing the Cleanee or Cleaner?
+        
+                            <br>
+                            <label class="rad"><input type="radio"
+                                          class="radType"
+                                          name="radType"
+                                          value="Cleanee"
+                                          <?php if ($style == "Cleanee") print 'checked' ?>
+                                          tabindex="330"/>Cleanee</label>
+                            <label class="rad"><input type="radio"
+                                          class="radType"
+                                          name="radType"
+                                          value="Cleaner"
+                                          <?php if ($style == "Cleaner") print 'checked' ?>
+                                          tabindex="340">Cleaner</label>
+                </fieldset>
+                <fieldset class="text">
+                    <legend>Contact Information</legend>
+
+                    <label class="required" for="txtName">Reviewee's Email*
+                        <br>
+                        <input autofocus
+                               <?php if ($NameERROR) print 'class="mistake"'; ?>
+                               id="txtName"
+                               maxlength="45"
+                               name="txtName"
+                               onfocus="this.select()"
+                               placeholder="Reviewee's Email"
+                               tabindex="100"
+                               type="text" 
+                               value="<?php print $Name; ?>"
+                        >
+                    </label>                  
+                    
+                    <label class="required" for="txtEmail">Your Email*
+                        <br>
+=======
     <form id="frmRegister" method="post">
     <div class="row">
         <div class="input-field col m6 s6">
@@ -415,6 +457,7 @@ if (isset($_POST["btnSubmit"])) {
             </div>
         </div>
             <label for="txtEmail">Your Email*</label>
+>>>>>>> 6712db5a72bb46a3776f21dccb0925345379aee0
                         <input 
                                <?php if ($emailERROR) print 'class="mistake"'; ?>
                                id="txtEmail"
