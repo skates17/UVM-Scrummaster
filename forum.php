@@ -40,10 +40,16 @@ foreach($info as $arrayRec){
         
 } 
 if (isset($_POST['action'])){
-                        $to =  "5854902358@vtext.com";
+    
+                        $to =  "5857394007@vtext.com";
                             $from = "PigPen";
-                            $message = "Someone is interested in cleaning your room at 4pm today for $".$arrayRec['fldPrice'].'';
+                            $message = $userid." is interested in cleaning your room at 4pm today for $".$arrayRec['fldPrice'].'';
                             $headers = "From: $from\n";
+                            $msg = $message.' '.$headers;
                             mail($to, '', $message, $headers);
+                            print '<div class="container" <h1 style="position:absolute">'.$msg.'</h1></div>';
+                            '<div class="container" <h1="" style="position: absolute; top: 20px; text-align: center;'.$msg.'</h1></div>';
+
+            
 }
 ?>
