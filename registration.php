@@ -7,12 +7,6 @@ $info = $thisDatabaseReader->select($getinfo,"", 1, 0, 2, 0, false, false);
 $firstName=$info[0]['fldFirstName'];
 $lastName=$info[0]['fldLastName'] ;
 
-$firstName = "";
-$lastName = "";
-$telephone = "";
-$address = "";
-$cleaner = false;
-$cleanee = false;
 
 $dataRecord = array();
 
@@ -112,7 +106,7 @@ $addInfo = $thisDatabaseWriter->insert($insertInfo, $dataRecord, 1, 0, 0, 0, fal
            
                <div class="input-field col s6">
                    <i class="material-icons prefix">mark_unread</i>
-                  <textarea name ="address" id="address" class="materialize-textarea" value = "<?php print $address ?>"></textarea>
+                  <input id="address" name = "address" type = "text" value="<?php print $address ?>"  class="validate"></textarea>
                   <label for="address">Address</label>
                </div>
         </div>			
