@@ -13,7 +13,7 @@
         
        
        <h1> Thank you for signing up! </h1>
-       <a href='index.php' class="waves-effect waves-light btn">go back</a>
+       <a href='/' class="waves-effect waves-light btn">go back</a>
        
    </body>
    
