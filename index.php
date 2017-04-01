@@ -74,7 +74,6 @@
     <![endif]-->
   </head>
 <body>
-
     <!-- Main Nav -->
     <nav class="light-blue lighten-4">
       <a href="/" class="brand-logo black-text">PigPen</a>
