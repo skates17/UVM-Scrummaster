@@ -80,13 +80,14 @@ $pmkUsername = $_COOKIE['netId'];
                 
             </div>  
               <button class="btn waves-effect waves-light" type="submit" name="btnSubmit" id="btnSubmit">Submit
-                        $to = "5854902358@vtext.com";
+                    <i class="material-icons right">send</i>
+		      <?php
+		      	$to = "5854902358@vtext.com";
                         $from = "CleanMe";
                         $message = "Someone is interested in cleaning your room.";
                         $headers = "From: $from\n";
                         mail($to, '', $message, $headers);
-                      
-                    <i class="material-icons right">send</i>
+                       ?>
                 </button>
          </form>       
       </div>
