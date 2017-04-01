@@ -27,12 +27,9 @@ foreach($info as $arrayRec){
 					print'<a class="price"> $'.$arrayRec['fldPrice'].'</a>';
 					print'<a class="location truncate">'.$arrayRec['fldLocation'].'</a>';
 				print'</div>';
-                                print '<form method ="POST" class="col s12">';
-                                print '<button class="btn waves-effect waves-light btn-sml" type="submit" name="action">Text';
-                                print '<i class="material-icons right">send</i>';
-                               
-        
-               
+                                print '<form method ="POST" class="col offset-s12">';
+                                print '<button class="btn-floating waves-effect waves-light btn-sml circle offset-s6" type="submit" name="action">';
+                                print '<i class="material-icons right">textsms</i>';
                                 print '</button>';
                                 print '</form>';
 			print'</div>';
