@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <?php include 'top.php';
+=======
+
+<?php 
+include "top.php";
+>>>>>>> origin/master
 $b="SELECT pmkPostId, fnkUsername, fldPhoto, fldPrice, fldComment,fldLocation";
 $b.=" FROM tblForum";
 $data=array($b);

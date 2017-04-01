@@ -37,7 +37,14 @@ include "lib/constants.php";
         print "<!-- make Database connections -->";
         $dbUserName = 'aram1_reader';
         $whichPass = "r"; //flag for which one to use.
+<<<<<<< HEAD
         $dbName = ARAM1_cs148;
+=======
+        $dbName = DATABASE_NAME;
+        
+        //print $dbUserName;
+       // print $dbName;
+>>>>>>> origin/master
 
         $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 
