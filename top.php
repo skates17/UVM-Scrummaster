@@ -24,13 +24,22 @@
     // generally you dont need the admin on the web
 
     print "<!-- make Database connections -->";
-    $dbUserName = 'aram1_reader';
+    $dbUserName = 'bb0f7db58de207';
     $whichPass = "r"; //flag for which one to use
-    $dbName = 'ARAM1_cs148';
+    $dbName = 'ad_9e7e960f8cf9a6b';
+
+    /*"credentials": {
+                "jdbcUrl": "jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/ad_9e7e960f8cf9a6b?user=bb0f7db58de207&password=9df46417",
+                "uri": "mysql://bb0f7db58de207:9df46417@us-cdbr-iron-east-03.cleardb.net:3306/ad_9e7e960f8cf9a6b?reconnect=true",
+                "name": "ad_9e7e960f8cf9a6b",
+                "hostname": "us-cdbr-iron-east-03.cleardb.net",
+                "port": "3306",
+                "username": "bb0f7db58de207",
+                "password": "9df46417"*/
 
     $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 
-    $dbUserName = 'aram1_writer';
+    $dbUserName = 'bb0f7db58de207';
     $whichPass = "w";
     $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
 

@@ -1,7 +1,7 @@
 <?php
 // passwords for your database 
-$dbReader="67zkZ6TTMrrYln9N";
-$dbWriter="fRqLlBUjK2DL4EcQ";
-$dbAdmin="Osm2BWePt886WQLf";
+$dbReader="9df46417";
+$dbWriter="9df46417";
+$dbAdmin="9df46417";
 
 ?>
