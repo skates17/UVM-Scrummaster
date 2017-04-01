@@ -63,7 +63,7 @@
     <nav class="light-blue lighten-4">
       <a href="/" class="brand-logo">PigPen</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="?Page=form"><i class="material-icons">settings</i></a></li>
+        <li><a href="?Page=register"><i class="material-icons">settings</i></a></li>
       </ul>
     </nav> <!-- !End nav -->
     
