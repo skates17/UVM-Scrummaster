@@ -27,10 +27,6 @@
     $dbUserName = 'aram1_reader';
     $whichPass = "r"; //flag for which one to use
     $dbName = 'ARAM1_cs148';
-    
-    //print $dbUserName;
-   // print $dbName;
-//    $dbName = 'ARAM1_cs148';
 
     $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 
@@ -38,6 +34,7 @@
     $whichPass = "w";
     $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
 
+    print "<!-- Connected to database -->";
     //ldap
     function ldapName($uvmId) {
         if (empty($uvmId))
@@ -49,8 +46,8 @@
 
         if ($ds) {
             $r = ldap_bind($ds);
-            $dn = "uid=$uvmId,ou=People,dc=uvm,dc=edu";
-            $filter = "(|(netid=$uvmId))";
+            $dn = "uid=". $uvmId.",ou=People,dc=uvm,dc=edu";
+            $filter = "(|(netid=".$uvmId."))";
             $findthese = array("sn", "givenname");
 
             // now do the search and get the results which are stored in $info
