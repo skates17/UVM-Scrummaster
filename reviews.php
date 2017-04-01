@@ -399,7 +399,7 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
-    <form action="<?php print $phpSelf; ?>"
+    <form
           id="frmRegister"
           method="post">
                 <fieldset class="radio">
