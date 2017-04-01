@@ -133,7 +133,6 @@
     <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.7996476964513!2d-73.20335173440914!3d44.47827937910155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cca7a5beeaf827f%3A0x7ffeed5fea2eed3b!2sWaterman+Bldg%2C+85+S+Prospect+St%2C+Burlington%2C+VT+05401!5e0!3m2!1sen!2sus!4v1491073272713" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </body>
 </body>
 </html>
