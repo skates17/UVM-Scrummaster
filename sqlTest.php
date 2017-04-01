@@ -1,116 +1,48 @@
 <?php
-
 include "top.php";
-?>
+//############################################################################
+// find name in uvm directory      
+function ldapName($uvmID) {
+    if (empty($uvmID))
+        return "no:netid";
 
-<article>
+    $name = "not:found";
 
-<form action="index.php"
-          method="GET"
-          id="frmRegister">
-<?php
-//##############################################################################
-//
-// This page lists the departments based on the query given
-// 
-// i tend to print out each array to see what is inside it. this helps with my
-// understanding
-// if (DEBUG) {
-//    print "<p>Contents of the array<pre>";
-//    print_r($array_name);
-//    print "</pre></p>";
-// }
-//##############################################################################
-$whereCount = 0;
-$whereClause= "";
-$deptCode = "";
-$data = "";
-$whereCount2 = 0;
-$whereClause2= "";
-$deptCode2 = "";
-$data2 = "";
+    $ds = ldap_connect("ldap.uvm.edu");
 
-//to gather info from the first list box nd send it to the second list box
-if(isset($_GET["lstDepartment"])){
-    $deptCode = htmlentities($_GET[lstDepartment], ENT_QUOTES, "UTF-8");//it takes the value and sends it to $whereClause through $data
-    $data = array($deptCode);
-    $whereClause = ' WHERE fldSubject LIKE ?';
-    $whereCount++;//needed for select class in database.php
-}
-//to gather info from the second list box an send to orgonize the description
-if(isset($_GET["lstDepartment"])){
-    $deptCode2 = htmlentities($_GET[classes], ENT_QUOTES, "UTF-8");
-    $data2 = array($deptCode2);
-    $whereClause2 = ' WHERE fldTitle LIKE ?';
-    $whereCount2++;
-}
- 
-//build up the q
-$query = 'SELECT pmkCourseId, fldSubject FROM tblClass GROUP BY fldSubject';//first list box
-$query2 = 'SELECT pmkCourseId, fldSubject, fldNumber, fldTitle FROM tblClass';//second
-$query2 .=$whereClause;
-$query2 .=' GROUP BY fldSubject, fldNumber, fldTitle';
-$query3 = 'SELECT pmkCourseId, fldSubject, fldNumber, fldTitle, fnkNetId, fnkCourseId, fldCompNum, fldSec, fldLec, fldCamp, fldMaxEnr, fldCurEnr, fldStart, fldEnd, fldDay, fldCredits, fldBldg, fldRoom, pmkNetId, fldLastName, fldFirstName, fldEmail';//second
-$query3 .=" FROM tblTeacherClass JOIN tblClass ON pmkCourseId = fnkCourseId JOIN tblTeacher on pmkNetId = fnkNetId";
-$query3 .=$whereClause2;
-//$query3 .=' GROUP BY fldSubject, fldNumber, fldTitle';
+    if ($ds) {
+        $r = ldap_bind($ds);
+        $dn = "uid=$uvmID,ou=People,dc=uvm,dc=edu";
+        $filter = "(|(netid=$uvmID))";
+        $findthese = array("sn", "givenname");
 
-
-$departments = $thisDatabaseReader->select($query, "", 0, 0, 0, 0, false, false);
-$departments2 = $thisDatabaseReader->select($query2, $data, $whereCount, 0, 0, 0, false, false);
-$departments3 = $thisDatabaseReader->select($query3, $data2, $whereCount2, 0, 0, 0, false, false);
-
-if (DEBUG) {
-    print "<p>Contents of the array<pre>";
-    print_r($departments);
-    print "</pre></p>";
-}
-
-//print '<h2 class="alternateRows">Meet the Jetsons!</h2>';
-//if (is_array($departments)) {
-//    foreach ($departments as $department) {
-//        print "<p>" . $department['fldSubject'] . " " . $department['fldNumber'] . "</p>";
-//    }
-//}
-?>
-    
-    <fieldset  class="lists">
-    <legend>Departments are listed bellow. </legend>
-    <select class="classes" 
-            name="lstDepartment" 
-            tabindex="520" >
-<?php
-    include "departments.php";
-?>
-        </select>
-
+        // now do the search and get the results which are stored in $info
+        $sr = ldap_search($ds, $dn, $filter, $findthese);
         
-</fieldset> 
-    
-        <fieldset  class="lists">
-    <legend>Classes in selected department are listed bellow. </legend>
-    <select class="classes" 
-            name="classes" 
-            tabindex="521" >
-<?php
-    include "classes.php";
-?>
-        </select>
-</fieldset> 
-            <fieldset class="buttons">
-                <input type="submit" id="btnSubmit" name="btnSubmit" value="Register" tabindex="900" class="button">
-            </fieldset> <!-- ends buttons -->  
-    </form>
-    
-    <p>(The description will only show up if the proper department box is chosen for that class)</p>
-    <h4>Here's your class description:</h4>
-    
-<?php
-    include "description.php";
-?>
-    
-</article>
+        // if we found a match (in this example we should actually always find just one
+        if (ldap_count_entries($ds, $sr) > 0) {
+            $info = ldap_get_entries($ds, $sr);
+            $name = $info[0]["givenname"][0] . ":" . $info[0]["sn"][0];
+        }
+    }
 
+    ldap_close($ds);
 
+    return $name;
+}
+$NetId = htmlentities($_SERVER["REMOTE_USER"], ENT_QUOTES, "UTF-8");
+
+$query3 = "SELECT pmkPlanId, `fnkStudentNetId`,`fldStudentDegree`FROM tblPlans WHERE fnkStudentNetId ='". $NetId ."' ;";
+    $thePlans = $thisDatabaseReader->select($query3, "", 1, 0, 2, 0, false, false);
+    foreach ($thePlans as $aPlan) {
+        $_SESSION['planId'] = $aPlan['pmkPlanId'];
+    }
+?>
+
+<h3>Begin making a plan here: <a href="createPlan.php">Create Plan.</a> </h3>
+<h3>By clicking on view plan you'll see your most recently viewed plan:<a href="viewPlan.php">View Plan.</a></h3>
+<?php
+include "footer.php";
+?>
 </body>
 </html>
