@@ -49,18 +49,8 @@
 					<div class="clearfix"></div>
 						<script src="js/dropfile.js"></script>
 				</div>
-					<div class="personal-details">
-					<form>
-						<label>Name <span>*</span></label>
-						<input type="text" class="name" placeholder="">
-						<div class="clearfix"></div>
-						<label>Phone number <span>*</span></label>
-						<input type="text" class="phone" placeholder="">
-						<div class="clearfix"></div>
-						<label>Email Address<span>*</span></label>
-						<input type="text" class="email" placeholder="">
-						<div class="clearfix"></div>
-
+				
+				
 					<input type="submit" value="Post">					
 					<div class="clearfix"></div>
 					</form>
