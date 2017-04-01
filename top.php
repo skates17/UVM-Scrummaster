@@ -1,9 +1,17 @@
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
 <?php
     // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
     //
     // inlcude all libraries. 
     // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
-    include("lib/constants.php");
+    
+    include(__DIR__ . "/lib/constants.php");
 
     print "<!-- require Database.php sdfea -->";
 
@@ -26,7 +34,7 @@
 
     $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 
-    $dbUserName = 'aram1' . '_writer';
+    $dbUserName = 'aram1_writer';
     $whichPass = "w";
     $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
 
@@ -61,9 +69,57 @@
     }
     $NetId = htmlentities($_SERVER["REMOTE_USER"], ENT_QUOTES, "UTF-8");
     $name = ldapName($NetId);
-    $name = split(":", $name);
+    $name = explode(":", $name);
     $netIdArray = array($NetId, $name[0], $name[1]);
     $insertNames = "INSERT INTO `tblUser`(`pmkUsername`, `fldFirstName`, `fldLastName`) VALUES (?,?,?)";
     $addNames = $thisDatabaseWriter->insert($insertNames, $netIdArray, 0, 0, 0, 0, false, false);
     setcookie("netId", $NetId, time() + (60*60*24*1), '/');
 ?>
+
+<title>PigPen</title>
+        
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+        
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+        <meta name="description" content="">
+        <meta name="author" content="Jim Conallen">
+        <link rel="icon" href="./images/bluemix_icon.png">
+        
+        <meta charset="utf-8">
+        <meta name="author" content="Scrum Masters">
+        <meta name="description" content="Dor Cleaner">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/sin/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="clean.css" type="text/css" media="screen">
+        
+        
+
+        <!-- Bootstrap core CSS -->
+<!--     <link href="./css/bootstrap.min.css" rel="stylesheet"> -->
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="starter-template.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="./js/ie-emulation-modes-warning.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
