@@ -3,7 +3,7 @@
     //
     // inlcude all libraries. 
     // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
-    include "lib/constants.php";
+    include("lib/constants.php");
 
     print "<!-- require Database.php sdfea -->";
 
@@ -18,15 +18,15 @@
     print "<!-- make Database connections -->";
     $dbUserName = 'aram1_reader';
     $whichPass = "r"; //flag for which one to use
-    $dbName = ARAM1_cs148;
+    $dbName = 'ARAM1_cs148';
     
     //print $dbUserName;
    // print $dbName;
-    $dbName = ARAM1_cs148;
+//    $dbName = 'ARAM1_cs148';
 
     $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 
-    $dbUserName = get_current_user() . '_writer';
+    $dbUserName = 'aram1' . '_writer';
     $whichPass = "w";
     $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
 
