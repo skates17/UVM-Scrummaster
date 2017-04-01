@@ -51,11 +51,10 @@
         $data = htmlspecialchars($data);
         return $data;
     }
-    ?>
-    
-    
+ 
+  $title = $disc = $price  = $location="" ;
+  ?>
 <?php
-  $title = $disc = $price  = $location 
 if (isset($_POST['push']) && ($valid)) {
 $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation, fldTitle)";
  //    $query = "INSERT INTO tblUsers (-, -, -, -, -)";
@@ -71,12 +70,8 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
     $results = $thisDatabaseWriter->select($query, "", 0, 0, 10, 0, false, false);
 
 
-} else {
-    ?>
-
-    <?php
-}
-?>
+} 
+ ?>  
 
 
 
@@ -145,7 +140,5 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 			</div>
 		</div>	
 	</div>
-	    <?php
-}
-?>
+
 </html>
