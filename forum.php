@@ -1,4 +1,3 @@
-<?php include 'top.php';?>
 <div class="forumPost">
 <div class="heading">
 <h2 class="forumH2Left">NetId</h2>
