@@ -8,6 +8,26 @@ $cleanee=false;
 
 $dataRecord = array();
 
+if (isset($_POST["btnSubmit"])) {
+    
+    if (isset($_POST["telephone"])) {
+    $dataRecord[]=$_POST["telephone"];
+
+}
+    if (isset($_POST["address"])) {
+    $dataRecord[]=$_POST["address"];
+
+}
+    if (isset($_POST["job"])) {
+    $dataRecord[]=$_POST["job"];
+    
+    echo '<h1>'.$dataRecord.'</h1>';
+
+}
+$pmkUsername = $_COOKIE['netId'];
+}
+
+
 ?>
 
 <html>
@@ -59,7 +79,7 @@ $dataRecord = array();
 
                 
             </div>  
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <button class="btn waves-effect waves-light" type="submit" name="action" id="btnSubmit">Submit
                     <i class="material-icons right">send</i>
                 </button>
          </form>       
