@@ -53,3 +53,13 @@ CREATE TABLE IF NOT EXISTS tblReview (
     fldApproved  int(1) NOT NULL DEFAULT '-1'
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 </pre>
+
+<pre>
+    
+CREATE TABLE IF NOT EXISTS `tblAdmin` (
+  `pmkNetId` varchar(12) NOT NULL,
+  `fldFirstName` varchar(255) NOT NULL,
+  `fldLastName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+</pre>
