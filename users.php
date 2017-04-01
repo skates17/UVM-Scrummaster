@@ -1,10 +1,10 @@
 <?php
-
-$a="aram1";
+include 'top.php';
+$a=$_GET("a");
 $specificQuery="SELECT pmkReviewId, fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId, fnkRevieweesNetId, fldApproved";
 $specificQuery.=" FROM tblReviews WHERE fnkRevieweesId= ?" ;
-$data=array($a);
-$QueryInfo=$thisDatabaseReader->select($reviewQuery, $data,1,1,0,0,false,false);
+
+$QueryInfo=$thisDatabaseReader->testquery($reviewQuery, $a,0,1,0,0,false,false);
 ?>
 <div class="page">
 <?php

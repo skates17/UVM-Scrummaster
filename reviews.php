@@ -29,7 +29,8 @@ $thisURL = $domain . $phpSelf;
 // in the order they appear on the form
 
 $cleanerName = "";
-$username=$_COOKIE['netId'];
+//$username=$_COOKIE['netId'];
+$username="jpornelo";
 $email = $username."@uvm.edu";    
 
 $style = "Passenger";
