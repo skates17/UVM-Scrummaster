@@ -1,6 +1,6 @@
 <?php
 
-$a=      
+$a="aram1";
 $specificQuery="SELECT pmkReviewId, fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId, fnkRevieweesNetId, fldApproved";
 $specificQuery.=" FROM tblReviews WHERE fnkRevieweesId= ?" ;
 $data=array($a);
@@ -19,7 +19,7 @@ if(!empty($QueryInfo)){
                 print'<h2 class="home">Declined Reviews</h2>';
                 $j++;
             }
-            print'<div id="review" class="review">';
+            //print'<div id="review" class="review">';
             print'<div class="heading">';
             print'<h5 class="heading">'.$arrayRec['fnkRevieweesNetId'].'</h5><h6 class=status>';
             if($arrayRec['fldStatus']=='1'){
@@ -82,7 +82,7 @@ if(!empty($QueryInfo)){
             //print'</div>';
             
             
-            print'</div>';
+            //print'</div>';
         }
 }?>
 

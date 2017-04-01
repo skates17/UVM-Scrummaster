@@ -337,8 +337,8 @@ if (isset($_POST["btnSubmit"])) {
 ?>
 
 <article id="main">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/Jonscss.css">
+	<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/Jonscss.css">-->
     <?php
     //####################################
     //
@@ -399,7 +399,7 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
-    <form action="<?php print PHP_SELF; ?>"
+    <form
           id="frmRegister"
           method="post">
                 <fieldset class="radio">
