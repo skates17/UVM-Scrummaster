@@ -25,10 +25,13 @@
 
     print "<!-- make Database connections -->";
     $dbUserName = 'bb0f7db58de207';
-    $whichPass = "r"; //flag for which one to use
     $dbName = 'ad_9e7e960f8cf9a6b';
+    
+    // Reader
+    $whichPass = "r";
     $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
     
+    // Writer
     $whichPass = "w";
     $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
 
