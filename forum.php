@@ -12,7 +12,7 @@ foreach($info as $arrayRec){
 
 
 print'<div class="row">';
-	print'<div class="col s12 m6">';
+	print'<div class="col s12 m3">';
 		print'<div class="forumPost card">';
 			print'<div class="card-content">';
 				print'<div class="heading">';

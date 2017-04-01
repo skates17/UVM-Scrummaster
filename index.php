@@ -35,8 +35,8 @@
     <meta name="description" content="">
     <meta name="author" content="Jim Conallen">
     <link rel="icon" href="./images/bluemix_icon.png">
-
-    <title>PHP MySQL Hackathon Example - MICHAEL CHANGE</title>
+    
+    <?php include "top.php" ?>
 
     <!-- Bootstrap core CSS -->
 <!--     <link href="./css/bootstrap.min.css" rel="stylesheet"> -->

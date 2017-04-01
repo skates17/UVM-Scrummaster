@@ -5,7 +5,7 @@ include "lib/constants.php";
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Google Link text so put something relevant here</title>
+        <title>PigPen</title>
         <meta charset="utf-8">
         <meta name="author" content="Scrum Masters">
         <meta name="description" content="Dor Cleaner">
