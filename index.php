@@ -19,12 +19,11 @@
 <html>
 <?php include "top.php" ?>
 <body>
-
     <!-- Main Nav -->
-    <nav class="light-blue lighten-4">
-      <a href="/" class="brand-logo black-text">PigPen</a>
+    <nav class="blue">
+      <a href="?" class="brand-logo">PigPen</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="?Page=registration"><i class="material-icons black-text">settings</i></a></li>
+        <li><a href="?Page=registration"><i class="material-icons">settings</i></a></li>
       </ul>
     </nav> <!-- !End nav -->
     
