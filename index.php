@@ -58,7 +58,7 @@
 
     <!-- Main Nav -->
     <nav>
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo">PigPen</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="btn">Sign In</a></li>
       </ul>
