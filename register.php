@@ -1,6 +1,6 @@
 <?php
 
-
+include "top.php";
 
 $firstName = "";
 $lastName = "";
@@ -36,7 +36,7 @@ if (isset($_POST["btnSubmit"])) {
     }
 
     foreach ($dataRecord as $key => $value) {
-       // echo '<p>' . $value . '</p>';
+        echo '<p>' . $value . '</p>';
     }
 }
 
@@ -45,19 +45,10 @@ $pmkUsername = $_COOKIE['netId'];
 array_push($dataRecord, $pmkUsername);
 $insertInfo = 'UPDATE `tblUser` SET fldPhone = ?, fldLocation = ?, fldCleaner = ? WHERE `pmkUsername` = ?';
 $addInfo = $thisDatabaseWriter->insert($insertInfo, $dataRecord, 1, 0, 0, 0, false, false);
-//print_r($dataRecord);
+print_r($dataRecord);
 
 ?>
-<html>
-    <head>
-        <title>Sign up for our services!</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">      
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
-    </head>
-    <body class="container">   
+  
 
         <h1>Edit your information below:</h1
         <form method ="POST" class="col s12" action="register.php">

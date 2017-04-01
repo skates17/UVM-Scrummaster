@@ -107,7 +107,7 @@ if (isset($_POST["btnSubmit"])) {
     $style = htmlentities($_POST["radType"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $style;
     
-    $rating=  htmlentities($_POST["star"], ENT_QUOTES, "UTF-8");
+    $rating= htmlentities($_POST["star"], ENT_QUOTES, "UTF-8");
     $dataRecord[]= $rating;
     
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -338,6 +338,7 @@ if (isset($_POST["btnSubmit"])) {
 
 <article id="main">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/Jonscss.css">
     <?php
     //####################################
     //
@@ -398,7 +399,7 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
-    <form action="<?php print $_SERVER['PHP_SELF']; ?>"
+    <form action="<?php print $phpSelf; ?>"
           id="frmRegister"
           method="post">
                 <fieldset class="radio">
