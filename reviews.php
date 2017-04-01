@@ -275,9 +275,9 @@ if (isset($_POST["btnSubmit"])) {
         $reviewee=  explode("@", $Name);
         $revieweeId=$reviewee[0];
         
-//         $query="INSERT IGNORE INTO tblReviews(fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId,fnkRevieweesNetId) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
-//         $data=array($status,$rating,$comments,$nice1,$fun1,$goodCleaner1,$goodMusic1,$badCleaner1,$uncomfortable1,$mean1,$late1, $username, $revieweeId);
-//         $results=$thisDatabaseWriter->insert($query,$data,0,0,0,0,FALSE,FALSE);
+         $query="INSERT IGNORE INTO tblReviews(fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId,fnkRevieweesNetId) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+         $data=array($status,$rating,$comments,$nice1,$fun1,$goodCleaner1,$goodMusic1,$badCleaner1,$uncomfortable1,$mean1,$late1, $username, $revieweeId);
+         $results=$thisDatabaseWriter->insert($query,$data,0,0,0,0,FALSE,FALSE);
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         //
         // SECTION: 2e Save Data
@@ -552,8 +552,6 @@ if (isset($_POST["btnSubmit"])) {
     ?>   
 
 </article>
-
-<?php include "footer.php"; ?>
 
 </body>
 </html>
