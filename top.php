@@ -35,9 +35,9 @@ include "lib/constants.php";
         // generally you dont need the admin on the web
 
         print "<!-- make Database connections -->";
-        $dbUserName = get_current_user() . '_reader';
+        $dbUserName = 'aram1_reader';
         $whichPass = "r"; //flag for which one to use.
-        $dbName = DATABASE_NAME;
+        $dbName = ARAM1_cs148;
 
         $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
 

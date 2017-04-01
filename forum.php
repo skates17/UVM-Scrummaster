@@ -1,5 +1,4 @@
-
-<?php 
+<?php include 'top.php';
 $b="SELECT pmkPostId, fnkUsername, fldPhoto, fldPrice, fldComment,fldLocation";
 $query.=" FROM tblForum";
 $data=array($b);
