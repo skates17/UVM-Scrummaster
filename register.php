@@ -4,7 +4,6 @@ include top.php;
 $telephone="";
 $address="";
 $cleaner=false;
-$cleanee=false;
 
 $dataRecord = array();
 
@@ -18,18 +17,19 @@ if (isset($_POST["btnSubmit"])) {
     $dataRecord[]=$_POST["address"];
 
 }
-    if (isset($_POST["job"])) {
-    $dataRecord[]=$_POST["job"];
+    if (isset($_POST["cleaner"])) {
+    $dataRecord[]=$_POST["cleaner"];
     
-    echo '<h1>'.$dataRecord.'</h1>';
+    }
+    
+   foreach($dataRecord as $key => $value){
+       echo '<p>'.$value.'</p>';
 
 }
+}
+
 $pmkUsername = $_COOKIE['netId'];
-}
-
-
 ?>
-
 <html>
    <head>
       <title>Sign up for our services!</title>
@@ -41,20 +41,20 @@ $pmkUsername = $_COOKIE['netId'];
    </head>
    <body class="container">   
        
-       <h1>Register to be a cleaner / cleanee!</h1>
+       <h1>Edit your information below:</h1>
        
        
       <div class="row">
-          <form method ="POST" class="col s12" action="registrationSuccess.php">
-        <div class="row">
+          <form method ="POST" class="col s12" action="register.php">
+        
           <i class="material-icons prefix">phone</i>
-          <input id="telephone" type="tel" class="validate">
+          <input id="telephone" name="telephone" type="tel" class="validate">
           <label for="telephone">Telephone</label>
-        </div>
-            <div class="row">
+        
+           
                <div class="input-field col s12">
-			      <i class="material-icons prefix">mark_unread</i>
-                  <textarea id="address" class="materialize-textarea"></textarea>
+                   <i class="material-icons prefix">mark_unread</i>
+                  <textarea name ="address" id="address" class="materialize-textarea"></textarea>
                   <label for="address">Address</label>
                </div>
             </div>			
@@ -62,11 +62,11 @@ $pmkUsername = $_COOKIE['netId'];
             <div class="row">
                <div class="input-field col s12">
                    <p>
-                     <input id="cleaner" type="radio" name="job" value="cleaner" checked>
+                     <input name="cleaner" id="cleaner" type="radio" value="cleaner">
                      <label for="cleaner">Cleaner</label>
                   </p>
                   <p>
-                     <input id="cleanee" type="radio" name="job" value="cleanee" checked>
+                     <input name="cleanee" id="cleanee" type="radio" value="cleanee">
                      <label for="cleanee">Cleanee</label>
                   </p>
                   <p>
@@ -74,17 +74,15 @@ $pmkUsername = $_COOKIE['netId'];
                   </p>
                </div>
                 
+               
+        
+
+                
             </div>  
-              <button class="btn waves-effect waves-light" type="submit" name="action" id="btnSubmit">Submit
-		      <?php
-                        $to = "5854902358@vtext.com";
-                        $from = "CleanMe";
-                        $message = "Someone is interested in cleaning your room.";
-                        $headers = "From: $from\n";
-                        mail($to, '', $message, $headers);
-                        ?>
+              <button class="btn waves-effect waves-light" type="submit" name="btnSubmit" id="btnSubmit">Submit
+                 
+                      
                     <i class="material-icons right">send</i>
-		      
                 </button>
          </form>       
       </div>
