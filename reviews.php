@@ -30,7 +30,7 @@ $thisURL = $domain . $phpSelf;
 
 $Name = "";
 
-//$email = $_COOKIE["netId"]."@uvm.edu";
+$email = "jpornelo@uvm.edu";
 $style = "Cleanee";
 
 $nice=true;
@@ -128,13 +128,13 @@ if (isset($_POST["btnSubmit"])) {
         $NameERROR = true;
     }
     
-    //if ($email == "") {
-    //    $errorMsg[] = "Please enter your email address";
-    //    $emailERROR = true;
-    //} elseif (!verifyEmail($email)) {
-        //$errorMsg[] = "Your email address appears to be incorrect.";
-       // $emailERROR = true;
-   // } 
+    if ($email == "") {
+        $errorMsg[] = "Please enter your email address";
+        $emailERROR = true;
+    } elseif (!verifyEmail($email)) {
+        $errorMsg[] = "Your email address appears to be incorrect.";
+        $emailERROR = true;
+    } 
     
     if (isset($_POST["chk1"])) {
         $nice = true;
@@ -313,7 +313,7 @@ if (isset($_POST["btnSubmit"])) {
         //
         // Process for mailing a message which contains the forms data
         // the message was built in section 2f.
-        //$to = $email; // the person who filled out the form
+        $to = $email; // the person who filled out the form
         $cc = "";
         $bcc = "jpornelo@uvm.edu";
 
@@ -354,7 +354,7 @@ if (isset($_POST["btnSubmit"])) {
             print "not ";
         }
         print "been sent:</p>";
-        //print "<p>To: " . $email . "</p>";
+        print "<p>To: " . $email . "</p>";
     
         print $message;
     } else {
@@ -398,7 +398,7 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
-    <form action="<?php print $phpSelf; ?>"
+    <form action="<?php print $_SERVER['PHP_SELF']; ?>"
           id="frmRegister"
           method="post">
                 <fieldset class="radio">
