@@ -1,11 +1,11 @@
 <?php
-include 'top.php';
-$a=$_GET("a");
+$a=$_GET["a"];
+//$a="jpornelo";
 
-$specificQuery="SELECT pmkReviewId, fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId, fnkRevieweesNetId";
-$specificQuery.=" FROM tblReviews WHERE fnkNetId = ?" ;
+$specificQuery="SELECT fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkRevieweesNetId, fnkNetId";
+$specificQuery.=" FROM tblReviews" ;
 
-$QueryInfo=$thisDatabaseReader->select($specificQuery, $a,1,1,0,0,false,false);
+$QueryInfo=$thisDatabaseReader->select($specificQuery, $a,0,0,0,0,false,false);
 ?>
 <div class="page">
 <?php
@@ -72,8 +72,4 @@ if(!empty($QueryInfo)){
             //print'</div>';
         }
 }?>
-
-<hr>
-
-</div>
-<?php
+    <hr>
