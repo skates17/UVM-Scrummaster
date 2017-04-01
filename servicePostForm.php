@@ -138,7 +138,7 @@ $query = "INSERT INTO fnkUsername, fldPhoto, fldPrice, fldComment, fldLocation, 
 						<input type="text" class="name" name="location" placeholder="" value="<?php echo $location; ?>">
 						<div class="clearfix"></div>
 
-					<input type="submit" name="push" value="Post">					
+					<input type="submit" name="push" value="POST">					
 					<div class="clearfix"></div>
 					</form>
 					</div>
