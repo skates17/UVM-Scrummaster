@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 <?php 
 include "top.php";
+=======
+<?php include 'top.php';
+>>>>>>> c36b8fa7bd37851de7769ec609515f351a7aa4e6
 $b="SELECT pmkPostId, fnkUsername, fldPhoto, fldPrice, fldComment,fldLocation";
 $b.=" FROM tblForum";
 $data=array($b);
