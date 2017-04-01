@@ -48,6 +48,10 @@ if (isset($_POST["btnSubmit"])) {
 }
 
 $pmkUsername = $_COOKIE['netId'];
+array_push($dataRecord, $pmkUsername);
+$insertInfo = 'UPDATE `tblUser` SET fldPhone = ?, fldLocation = ?, fldCleaner = ? WHERE `pmkUsername` = ?';
+$addInfo = $thisDatabaseWriter->insert($insertInfo, $dataRecord, 1, 0, 0, 0, false, false);
+print_r($dataRecord);
 ?>
 <html>
    <head>
