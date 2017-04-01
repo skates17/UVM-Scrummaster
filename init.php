@@ -56,6 +56,28 @@
 <h1>Initializing DB</h1>
 
 <?php
+$uvmID = htmlentities($_SERVER["REMOTE_USER"], ENT_QUOTES, "UTF-8");
+print($uvmID);
+  function ldapName($uvmID) {
+    if(empty($uvmID)) {
+      return "no:netid";
+      $name = "not:found";
+    }
+    $ds = ldap_connect("ldap.uvm.edu");
+    if($ds) {
+      $r = ldap_bind;
+      $dn = "uid = $uvmID, ou = People, dc = uvm, dc = edu";
+      $filter = "(|(netid=$uvmID))";
+      $findthese = array("sn", "givenname");
+      $sr = ldap_search($ds, $dn,$filter, $findthese);
+    }
+    if(ldap_count_entries($ds, $sr) > 0) {
+      $info = ldap_get_entries($ds,$sr);
+      $name = $info[0]["givenname"][0] . ":" . $info[0]["sn"][0];
+    }
+    ldap_close($ds);
+    return $name;
+  }
 $sqlTable="DROP TABLE IF EXISTS todos";
 if ($mysqli->query($sqlTable)) {
     echo '<div class="alert alert-success" role="alert">';
