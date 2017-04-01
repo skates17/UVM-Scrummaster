@@ -1,5 +1,4 @@
 <?php
-include "top.php";
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
 // SECTION: 1 Initialize variables
@@ -399,47 +398,23 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
-    <form
-          id="frmRegister"
-          method="post">
-                <fieldset class="radio">
-                    <legend>Preference</legend>
-                    Are you Reviewing the Cleanee or Cleaner?
-        
-                            <br>
-                            <label class="rad"><input type="radio"
-                                          class="radType"
-                                          name="radType"
-                                          value="Cleanee"
-                                          <?php if ($style == "Cleanee") print 'checked' ?>
-                                          tabindex="330"/>Cleanee</label>
-                            <label class="rad"><input type="radio"
-                                          class="radType"
-                                          name="radType"
-                                          value="Cleaner"
-                                          <?php if ($style == "Cleaner") print 'checked' ?>
-                                          tabindex="340">Cleaner</label>
-                </fieldset>
-                <fieldset class="text">
-                    <legend>Contact Information</legend>
-
-                    <label class="required" for="txtName">Reviewee's Email*
-                        <br>
-                        <input autofocus
-                               <?php if ($NameERROR) print 'class="mistake"'; ?>
-                               id="txtName"
-                               maxlength="45"
-                               name="txtName"
-                               onfocus="this.select()"
-                               placeholder="Reviewee's Email"
-                               tabindex="100"
-                               type="text" 
-                               value="<?php print $Name; ?>"
-                        >
-                    </label>                  
-                    
-                    <label class="required" for="txtEmail">Your Email*
-                        <br>
+    <form id="frmRegister" method="post">
+    <div class="row">
+        <div class="input-field col m6 s6">
+            <input type="radio" name="radType" value="Cleanee" <?php if ($style == "Cleanee") print 'checked' ?> tabindex="330"/>
+            <label class="rad">Cleanee</label>
+        </div>
+        <div class="input-field col m6 s6">
+            <input type="radio" name="radType" value="Cleaner" <?php if ($style == "Cleaner") print 'checked' ?> tabindex="340">
+            <label class="rad">Cleaner</label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                    <input id="txtName" maxlength="45" name="txtName" type="text" required value="<?php print $Name; ?>">
+                    <label for="txtName">Reviewee's Email *</label>
+            </div>
+        </div>
+            <label for="txtEmail">Your Email*</label>
                         <input 
                                <?php if ($emailERROR) print 'class="mistake"'; ?>
                                id="txtEmail"
@@ -450,14 +425,8 @@ if (isset($_POST["btnSubmit"])) {
                                tabindex="120"
                                type="text"
                                value="<?php print $email; ?>"
-                               readonly
-                        >
-                    </label>
+                               readonly>
                     
-                    
-                </fieldset> <!-- ends contact -->
-                
-                <fieldset class="rating">
                     <legend>Rating</legend>
                 <div class="stars">
                     <input class="star star-5" id="star-5" type="radio" name="star" value="5" <?php if ($rating == "5") print 'checked' ?>/>
@@ -471,16 +440,10 @@ if (isset($_POST["btnSubmit"])) {
                     <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
                     <label class="star star-1" for="star-1"></label>
                 </div>
-                </fieldset>
-                
-                
-                
-                <fieldset class="textArea">
                     
                     
                     <legend>Comments</legend>
                 <textarea id="txtComments" name="txtComments" tabindex="600" onfocus="this.select()"></textarea>
-                </fieldset>
                 
                 <fieldset class="checkbox <?php if ($activityERROR) print ' mistake'; ?>">
                     <legend>Description</legend>
