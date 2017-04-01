@@ -18,8 +18,10 @@ foreach($info as $arrayRec){
 					print'<h6>Posted by '.$arrayRec['fnkUsername'].'</h6>';
 				print'</div>';
 				print'</div>';
+				print'<div class="row">';
 				print'<div id="forumPhoto" class="valign-wrapper">';
 					print'<img alt="room" class="responsive-img valign" src="'.$arrayRec['fldPhoto'].'">';
+				print'</div>';
 				print'</div>';
 				print'<div class="description">';
 					print'<p>'.$arrayRec['fldComment'].'</p>';
