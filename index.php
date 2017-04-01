@@ -62,56 +62,17 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="btn">Sign In</a></li>
       </ul>
-    </nav>
+    </nav> <!-- !End nav -->
     
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>PHP, MySQL and Weather, oh my.</h1>
-        <p>
-        This page is based off the <a href="http://getbootstrap.com/examples/jumbotron/">Jumbotron Bootstrap template</a>.
-        It is useful for a big opening splash of a home page.
-        </p>
-      </div>
-    </div>
-
+    <!-- Container for services -->
     <div class="container">
-      <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <h2>MySQL</h2>
-          <p>
-          This application example uses the MySQLi extension.  By default Bluemix does not automatically 
-          include this extension when deploying PHP applications in Cloud Foundry.  A composer.json file
-          was added to the root folder with the proper json to tell Bluemix to include it when deploying.
-          </p>
-          <p><a class="btn btn-default" href="todos.php" role="button">View database page &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Weather API</h2>
-          <p>
-          This application uses the Weather API to get the current conditions for a specific location (specified
-          by a US zip code).  The app makes a REST call to the weather server and displays only some of the 
-          information on the page. 
-          </p>
-          <p><a class="btn btn-default" href="weather.php" role="button">View current weather &raquo;</a></p>
-       </div>
+        <?php
+          include $_GET[0] . ".php";
+        ?>
       </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2017 IBM Corporation</p>
-        <p>
-        <a target="_blank" href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FPHP-MySQL-Hackathon-Example">
-        <button type="submit" class="btn btn-primary">
-        	<img style="width:20px;height:20px;" src="./images/IBM_Bluemix_logo.svg.png">
-  			Deploy to Bluemix Toolchain
-		</button>
-		</a>
-        </p>
-      </footer>
-    </div> <!-- /container -->
+    </div> <!-- !End Container>
+    
 
 	
 	<!-- Bootstrap core JavaScript
