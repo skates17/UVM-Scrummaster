@@ -15,7 +15,7 @@ foreach($info as $arrayRec){
 		print'<div class="forumPost card">';
 			print'<div class="card-content">';
 				print'<div class="heading">';
-					print'<span class="card-title">'.$arrayRec['fnkUsername'].'</h2>';
+					print'<h2 class="card-title">'.$arrayRec['fnkUsername'].'</h2>';
 				print'</div>';
 				print'<div id="forumPhoto" class="valign-wrapper">';
 					print'<img alt="room" class="responsive-img valign" src="'.$arrayRec['fldPhoto'].'">';
