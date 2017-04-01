@@ -23,7 +23,8 @@
     <nav class="blue">
       <a href="?" class="brand-logo">PigPen</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="?Page=registration"><i class="material-icons">settings</i></a></li>
+        <li><a href="?Page=servicePostForm" class="add-new-post btn btn-floating pulse"><i class="material-icons">add</i></a></li>
+        <li><a href="?Page=registration" class="btn btn-floating red"><i class="material-icons">settings</i></a></li>
       </ul>
     </nav> <!-- !End nav -->
     

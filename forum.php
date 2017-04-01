@@ -1,5 +1,3 @@
-
-
 <?php 
 
 $b="SELECT pmkPostId, fnkUsername, fldPhoto, fldPrice, fldComment,fldLocation,fldTitle";
@@ -17,7 +15,7 @@ foreach($info as $arrayRec){
 				print'<div class="row">';
 				print'<div class="heading">';
 					print'<a href="?Page=users&a='.$arrayRec['fnkUsername'].'"><h2 class="card-title">'.$arrayRec['fldTitle'].'</h2></a>';
-					print'<h6>'.$arrayRec['fnkUsername'].'</h6>';
+					print'<h6>Posted by '.$arrayRec['fnkUsername'].'</h6>';
 				print'</div>';
 				print'</div>';
 				print'<div id="forumPhoto" class="valign-wrapper">';
@@ -49,5 +47,3 @@ if (isset($_POST['action'])){
                             mail($to, '', $message, $headers);
 }
 ?>
-                    
-<a href="?Page=servicePostForm" class="btn">Add Post</a>
