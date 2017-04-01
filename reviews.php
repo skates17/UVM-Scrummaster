@@ -28,9 +28,9 @@ $thisURL = $domain . $phpSelf;
 // Initialize variables one for each form element
 // in the order they appear on the form
 
-$driverName = "";
-
-$email = $_COOKIE['netId']."@uvm.edu";    
+$cleanerName = "";
+$username=$_COOKIE['netId'];
+$email = $username."@uvm.edu";    
 
 $style = "Passenger";
 
@@ -55,7 +55,7 @@ $comments="";
 //
 // Initialize Error Flags one for each form element we validate
 // in the order they appear in section 1c.
-$driverNameERROR = false;
+$cleanerNameERROR = false;
 
 $userERROR = false;
 
@@ -96,8 +96,8 @@ if (isset($_POST["btnReview"])) {
     // remove any potential JavaScript or html code from users input on the
     // form. Note it is best to follow the same order as declared in section 1c.
 
-    $driverName = htmlentities($_POST["txtCleanerName"], ENT_QUOTES, "UTF-8");
-    $dataRecord[] = $driverName;
+    $cleanerName = htmlentities($_POST["txtCleanerName"], ENT_QUOTES, "UTF-8");
+    $dataRecord[] = $cleanerName;
     
     $comments = htmlentities($_POST["txtComments"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $comments;
@@ -121,23 +121,7 @@ if (isset($_POST["btnReview"])) {
     // order that the elements appear on your form so that the error messages
     // will be in the order they appear. errorMsg will be displayed on the form
     // see section 3b. The error flag ($emailERROR) will be used in section 3c.
-    if ($driverName == "") {
-        $errorMsg[] = "Please enter the reviewee's email address";
-        $driverNameERROR = true;
-    } elseif (!verifyEmail($driverName)) {
-        $errorMsg[] = "Reviewee's email appears to be incorrect";
-        $driverNameERROR = true;
-    }
-    
-    if ($email == "") {
-        $errorMsg[] = "Please enter your email address";
-        $emailERROR = true;
-    } elseif (!verifyEmail($email)) {
-        $errorMsg[] = "Your email address appears to be incorrect.";
-        $emailERROR = true;
-    } 
-    
-    if (isset($_POST["chk1"])) {
+     if (isset($_POST["chk1"])) {
         $nice = true;
     } else {
         $nice = false;
@@ -190,13 +174,13 @@ if (isset($_POST["btnReview"])) {
     $dataRecord[] = $late;
     
     
-     $query="SELECT pmkNetId, fldApproved FROM tblUsers "
-            . "WHERE pmkNetId = ? ";
-    $approvedData=array($username);
-    $approvedResults=$thisDatabaseReader->select($query,$approvedData,1,0,0,0,false,false);
-    if($approvedResults[0]['fldApproved']!='1' OR empty($approvedData)){
-        $userERROR=true;
-        $errorMsg[]="Registration Required to Participate";
+//     $query = "SELECT pmkNetId, fldApproved FROM tblUsers "
+//            . "WHERE pmkNetId = ? ";
+//    $approvedData = array($username);
+//    $approvedResults = $thisDatabaseReader->select($query, $approvedData, 1, 0, 0, 0, false, false);
+//    if ($approvedResults[0]['fldApproved'] != '1' OR empty($approvedData)) {
+//        $userERROR = true;
+//        $errorMsg[] = "Registration Required to Participate";
     }
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
@@ -206,7 +190,7 @@ if (isset($_POST["btnReview"])) {
     //    
   
     if (!$errorMsg) {
-        if ($debug)
+        if ($debug){
             print "<p>Form is valid</p>";
         $nice1="";
         $goodCleaner1="";
@@ -273,7 +257,7 @@ if (isset($_POST["btnReview"])) {
         elseif($style=='Cleaner'){
             $status='2';
         }
-        $reviewee=  explode("@", $driverName);
+        $reviewee=  explode("@", $cleanerName);
         $revieweeId=$reviewee[0];
         
         $query="INSERT IGNORE INTO tblReviews(fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId,fnkRevieweesNetId) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -327,8 +311,8 @@ if (isset($_POST["btnReview"])) {
         $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
         
     } // end form is valid
-
-}    // ends if form was submitted.
+    }
+    // ends if form was submitted.
 
 
 //#############################################################################
@@ -423,7 +407,7 @@ if (isset($_POST["btnReview"])) {
                     <label class="required" for="txtCleanerName">Reviewee's Email*
                         <br>
                         <input autofocus
-                               <?php if ($driverNameERROR) print 'class="mistake"'; ?>
+                               <?php if ($cleanerNameERROR) print 'class="mistake"'; ?>
                                id="txtCleanerName"
                                maxlength="45"
                                name="txtCleanerName"
@@ -431,7 +415,7 @@ if (isset($_POST["btnReview"])) {
                                placeholder="Reviewee's Email"
                                tabindex="100"
                                type="text" 
-                               value="<?php print $driverName; ?>"
+                               value="<?php print $cleanerName; ?>"
                         >
                     </label>                  
                     
