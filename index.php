@@ -16,7 +16,6 @@
 */
 -->
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html>
 
   <head>
