@@ -30,7 +30,7 @@ $thisURL = $domain . $phpSelf;
 
 $driverName = "";
 
-$email = $username."@uvm.edu";    
+$email = $_COOKIE['netId']."@uvm.edu";    
 
 $style = "Passenger";
 
@@ -78,7 +78,7 @@ $mailed=false;
 //
 // SECTION: 2 Process for when the form is submitted
 //
-if (isset($_POST["btnSubmit"])) {
+if (isset($_POST["btnReview"])) {
 
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
@@ -337,8 +337,7 @@ if (isset($_POST["btnSubmit"])) {
 //
 ?>
 
-<article id="main">
-	<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <?php
     //####################################
     //
@@ -346,7 +345,7 @@ if (isset($_POST["btnSubmit"])) {
     // 
     // If its the first time coming to the form or there are errors we are going
     // to display the form.
-    if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) { // closing of if marked with: end body submit 
+    if (isset($_POST["btnReview"]) AND empty($errorMsg)) { // closing of if marked with: end body submit 
         print "<h2>Thank you for providing your information.</h2>";
     
         print "<p>For your records a copy of this data has ";
@@ -399,9 +398,7 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
-    <form
-          id="frmRegister"
-          method="post">
+        <form id="frmRegister" method="POST">
                 <fieldset class="radio">
                     <legend>Preference</legend>
                     Are you Reviewing the Cleaner or Passenger?
@@ -544,17 +541,13 @@ if (isset($_POST["btnSubmit"])) {
                 
             <fieldset class="buttons">
                 <legend></legend>
-                <input class="button" id="btnSubmit" name="btnSubmit" tabindex="900" type="submit" value="Register" >
+                <input class="button" id="btnReview" name="btnReview" tabindex="900" type="submit" value="Submit" >
             </fieldset> <!-- ends buttons -->
     </form>
 
     <?php 
     } // end body submit
     ?>   
-
-</article>
-
-<?php include "footer.php"; ?>
 
 </body>
 </html>
