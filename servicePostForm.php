@@ -57,7 +57,7 @@
 <?php
   $title = $disc = $price  = $location 
 if (isset($_POST['push']) && ($valid)) {
-$query = "INSERT INTO fnkUsername, fldPhoto, fldPrice, fldComment, fldLocation, fldTitle FROM tblForum"
+$query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation, fldTitle)";
  //    $query = "INSERT INTO tblUsers (-, -, -, -, -)";
 //get data from and assign to variables
     $title = $_POST["title"];
@@ -66,7 +66,7 @@ $query = "INSERT INTO fnkUsername, fldPhoto, fldPrice, fldComment, fldLocation, 
     $location = $_POST["location"];
     $user = $_COOKIE["netId"];
 
-    $values = ' VALUES ("' . $user . ' ","' . $photo. ' ","' . $price . ' ","' .  $disc . ' ","' . $location. ' ","' .  $title . '")';
+    $values = ' VALUES ("' . $user . ' ","' . $price . ' ","' .  $disc . ' ","' . $location. ' ","' .  $title . '")';
     $query .=$values;
     $results = $thisDatabaseWriter->select($query, "", 0, 0, 10, 0, false, false);
 
