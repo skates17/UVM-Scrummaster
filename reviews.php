@@ -1,5 +1,5 @@
 <?php
-//include "top.php";
+include "top.php";
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
 // SECTION: 1 Initialize variables
@@ -399,7 +399,7 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
-    <form action="<?php print $phpSelf; ?>"
+    <form action="<?php print PHP_SELF; ?>"
           id="frmRegister"
           method="post">
                 <fieldset class="radio">
