@@ -54,7 +54,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>PHP, MySQL and Weather, oh my.</h1>
+        <h1>PHP, MySQL  SEANS CHANGE and Weather, oh my.</h1>
         <p>
         This page is based off the <a href="http://getbootstrap.com/examples/jumbotron/">Jumbotron Bootstrap template</a>.
         It is useful for a big opening splash of a home page.
