@@ -1,10 +1,9 @@
 <?php
 include 'top.php';
-//$a=$_GET("a");
-$a="jpornelo";
+$a=$_GET("a");
 
 $specificQuery="SELECT pmkReviewId, fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId, fnkRevieweesNetId";
-$specificQuery.=" FROM tblReviews WHERE fnkRevieweesId= ? OR fnkNetId = ?" ;
+$specificQuery.=" FROM tblReviews WHERE fnkNetId = ?" ;
 
 $QueryInfo=$thisDatabaseReader->select($specificQuery, $a,1,1,0,0,false,false);
 ?>
