@@ -10,6 +10,7 @@ $dataRecord = array();
 
 if (isset($_POST["btnSubmit"])) {
     
+    print '<h1>HI</h1>';
     if (isset($_POST["telephone"])) {
     $dataRecord[]=$_POST["telephone"];
 
@@ -45,7 +46,7 @@ $pmkUsername = $_COOKIE['netId'];
        
        
       <div class="row">
-          <form method ="POST" class="col s12" action="registrationSuccess.php">
+          <form method ="POST" class="col s12" action="register.php">
         <div class="row">
           <i class="material-icons prefix">phone</i>
           <input id="telephone" type="tel" class="validate">
@@ -79,6 +80,7 @@ $pmkUsername = $_COOKIE['netId'];
 
                 
             </div>  
+               <input type="submit" class="btnSubmit" name="btnSubmit" value="Create New User" tabindex="900" class="button">
               <button class="btn waves-effect waves-light" type="submit" name="action" id="btnSubmit">Submit
                     <i class="material-icons right">send</i>
                 </button>
