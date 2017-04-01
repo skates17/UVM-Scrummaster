@@ -16,7 +16,7 @@ foreach($info as $arrayRec){
 			print'<div class="card-content">';
 				print'<div class="row">';
 				print'<div class="heading">';
-					print'<a href="?Page=users&a='.$arrayRec['fldUsername'].'"><h2 class="card-title">'.$arrayRec['fldTitle'].'</h2></a>';
+					print'<a href="?Page=users&a='.$arrayRec['fnkUsername'].'"><h2 class="card-title">'.$arrayRec['fldTitle'].'</h2></a>';
 					print'<h6>'.$arrayRec['fnkUsername'].'</h6>';
 				print'</div>';
 				print'</div>';
@@ -32,7 +32,7 @@ foreach($info as $arrayRec){
 				print'</div>';
                                 print '<form method ="POST" class="col offset-s11">';
                                 print '<button class="btn-floating waves-effect waves-light btn-sml circle offset-s6" type="submit" name="action">';
-                                print '<i class="material-icons right">textsms</i>';
+                                print '<i class="material-icons right blue">textsms</i>';
                                 print '</button>';
                                 print '</form>';
 			print'</div>';
