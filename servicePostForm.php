@@ -67,7 +67,7 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 
     $values = ' VALUES ("' . $user . ' ","' . $price . ' ","' .  $disc . ' ","' . $location. ' ","' .  $title . '")';
     $query .=$values;
-    $results = $thisDatabaseWriter->select($query, "", 0, 0, 10, 0, false, false);
+    $results = $thisDatabaseWriter->insert($query, "", 0, 0, 10, 0, false, false);
 
 
 } 
