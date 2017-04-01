@@ -33,3 +33,23 @@ CREATE TABLE IF NOT EXISTS tblReview (
      PRIMARY KEY (pmkReviewId) 
      );
 </pre>
+
+<pre>
+    CREATE TABLE IF NOT EXISTS  tblReviews  (
+    pmkReviewId  int(11) NOT NULL,
+    fldStatus  int(11) NOT NULL,
+    fldRating  int(2) NOT NULL,
+    fldComments  longtext NOT NULL,
+    fldNice  tinyint(1) NOT NULL,
+    fldFunny  tinyint(1) NOT NULL,
+    fldGoodCleaner  tinyint(1) NOT NULL,
+    fldGoodMusic  tinyint(1) NOT NULL,
+    fldBadCleaner  tinyint(1) NOT NULL,
+    fldUncomfortable  tinyint(1) NOT NULL,
+    fldMean  tinyint(1) NOT NULL,
+    fldLate  tinyint(1) NOT NULL,
+    fnkNetId  varchar(12) NOT NULL,
+    fnkRevieweesNetId  varchar(12) NOT NULL,
+    fldApproved  int(1) NOT NULL DEFAULT '-1'
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+</pre>
