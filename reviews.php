@@ -30,8 +30,7 @@ $thisURL = $domain . $phpSelf;
 
 $Name = "";
 
-$email = $username."@uvm.edu";    
-
+$email = $_COOKIE["netId"]."@uvm.edu";
 $style = "Cleanee";
 
 $nice=true;
