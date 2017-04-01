@@ -96,6 +96,8 @@
       </div>
     </div> <!-- !End Container>
 =======
+=======
+>>>>>>> origin/master
 <html>
 <?php include "top.php" ?>
 <body>
@@ -121,7 +123,7 @@
       </div>
     </div> <!-- !End Container>
 >>>>>>> 6712db5a72bb46a3776f21dccb0925345379aee0
-    
+	
 
 	
 	<!-- Bootstrap core JavaScript
