@@ -1,5 +1,13 @@
 <?php
 include top.php;
+
+$telephone="";
+$address="";
+$cleaner=false;
+$cleanee=false;
+
+$dataRecord = array();
+
 ?>
 
 <html>
@@ -12,17 +20,20 @@ include top.php;
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
    </head>
    <body class="container">   
+       
        <h1>Register to be a cleaner / cleanee!</h1>
-      <div class="row" style =" position: relative; top:20%">
-         <form class="col s12">
+       
+       
+      <div class="row">
+          <form method ="POST" class="col s12" action="registration_success.php">
         <div class="row">
           <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Telephone</label>
+          <input id="telephone" type="tel" class="validate">
+          <label for="telephone">Telephone</label>
         </div>
             <div class="row">
                <div class="input-field col s12">
-			      <i class="material-icons prefix">markunread_mailbox</i>
+			      <i class="material-icons prefix">mark_unread</i>
                   <textarea id="address" class="materialize-textarea"></textarea>
                   <label for="address">Address</label>
                </div>
@@ -42,7 +53,15 @@ include top.php;
 
                   </p>
                </div>
-            </div>           
+                
+               
+        
+
+                
+            </div>  
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
          </form>       
       </div>
    </body>   
