@@ -49,7 +49,8 @@
 					<div class="clearfix"></div>
 						<script src="js/dropfile.js"></script>
 				</div>
-					
+				
+				
 					<input type="submit" value="Post">					
 					<div class="clearfix"></div>
 					</form>
