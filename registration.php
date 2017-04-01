@@ -1,11 +1,20 @@
 <?php
 
+<<<<<<< HEAD
 $a = "'".$_COOKIE["netId"]."'";
 $getinfo = "SELECT * FROM tblUser WHERE pmkUsername = 'aram1'";
 $info = $thisDatabaseReader->select($getinfo,"", 1, 0, 2, 0, false, false);
 
 $firstName=$info[0]['fldFirstName'];
 $lastName=$info[0]['fldLastName'] ;
+=======
+$firstName = "";
+$lastName = "";
+$telephone = "";
+$address = "";
+$cleaner = false;
+$cleanee = false;
+>>>>>>> 6712db5a72bb46a3776f21dccb0925345379aee0
 
 $dataRecord = array();
 

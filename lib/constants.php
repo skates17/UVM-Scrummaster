@@ -1,7 +1,8 @@
 <?php
-define("DATABASE_NAME", strtoupper(get_current_user()) . '_cs148');
+//define("DATABASE_NAME", strtoupper(get_current_user()) . '_cs148');
+define("DATABASE_NAME", strtoupper('aram1') . '_cs148');
 
-define("ADMIN_EMAIL", get_current_user() . "@uvm.edu");
+define("ADMIN_EMAIL", 'aram1' . "@uvm.edu");
 
 define("LINE_BREAK", "\n");
 

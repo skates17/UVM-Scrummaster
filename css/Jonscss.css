@@ -1,0 +1,614 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 11, 2015, 7:47:23 AM
+    Author     : Jonathan Pornelos
+
+/* ===================  General Section  ==================================== */
+
+* {
+    font-size: 12pt;  /* sets the font size for all elements. */
+    /* look up reset style sheet */
+}
+
+
+body {
+    background-color: #ffffff;
+    padding-top: 60px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #008000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #000000;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 2.8em;
+}
+
+h3 {
+    color: black;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+
+h5 { 
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .6em;	
+}
+
+h6 {
+    color: #000000;
+    font-family: "sansserif";
+    font-weight: bold;
+    font-size: .5em;	
+}
+
+ol ol ol li {
+    list-style: lower-alpha
+}
+
+ol ol li {
+    font-weight: normal;
+    list-style: decimal;
+    padding-top: 0em
+}
+
+/*ol li {
+    font-weight: bold;
+    padding-top: 1em;
+    display: inline-block;
+    margin-right: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}*/
+
+ul ul ul li { 
+    list-style: circle;
+}
+
+ul ul li { 
+    list-style: square;
+}
+
+ul li { 
+    list-style: disc;
+}
+
+/* ===================  Table Section  ==================================== */
+
+table{
+    border-spacing: 0px;
+    padding: 2px;
+    border: 1px solid midnightblue;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    
+}
+th, td {
+    text-align: center;
+    border: 1px solid midnightblue;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+tr{
+    border: 1px solid midnightblue;
+    color: #FFFFFF;
+}
+th{
+    background-color: #008000;
+    color: white;
+}
+td{
+    color: black;
+    margin-right: 2px;
+}
+input#btnSubmit {
+    margin-right: 10px;
+}
+/* ===================  Header Section  ==================================== */
+/* now i would have a section that corresponds to my html sections.          */
+header h1{
+    padding-top: 10px;
+}
+h1.home{
+    margin-bottom: 2em
+}
+h1.class {
+    margin-top: -30px;
+    margin-left: 150px;
+}
+
+img#pic {
+    width: 100.15%;
+    margin-top: -8px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================  Form  ================================= */
+
+
+
+/* ===================  Home Page        ==================================== */
+/* -------------------------------------------------------------------------- */
+#home {  
+    background-color: #aaaaaa;
+}
+
+#home p {
+    /* this rule will give all the paragraphs on the home page a first line  */
+    /* indent of 3 em. it only effects paragraphs that are contained inside  */
+    /* the element with the id of home, this replaces using an embeded or    */
+    /* level style */
+    text-indent: 3em;
+}
+
+/* ===================  General Class Section  ============================= */
+/* I can add any generic classes here. Technically i can place these rules   */
+/* anywhere in the style sheet. This just helps to organize everything.     */
+.firstLine {
+    text-indent: 3em;
+}
+
+figure.img-left {
+    border: thin solid darkslategray;
+    float: right;
+    margin-left: 1em;
+    padding: 0.5em;
+}
+.small {
+    width: 150px;
+}
+figcaption {
+    text-align: center;
+}
+
+/* ===================  Schema  ============================= */
+p.contents {
+    margin-left: 3em;
+}
+p.SQL{
+    clear: both
+}
+span.type {
+    display: block;
+    float: left;
+    width: 10em;
+}
+span.name {
+    display: block;
+    float: left;
+    width: 10em;
+}
+span.keys {
+    display: block;
+    float: left;
+    width: 20em;
+}
+span.null{
+    display: block;
+    float:left;
+    width: 8em;
+}
+
+p:nth-child(odd){
+    background-color: whitesmoke;
+}
+
+p:nth-child(even){
+    background-color: lightcyan;
+}
+tr.even{
+    background-color: #bce0c4
+}
+th a {
+    color: lavender;
+} 
+table.one{
+    width: 85%;
+}
+table.info{
+    width: 85%;
+}
+
+
+div.banner{
+    width: 100%;
+    margin:auto;
+}
+@media screen and (min-width: 1200px){
+    div.banner{
+        width: 80%;
+        margin: auto;
+    }
+}
+/*********************NAVIGATIONAL BAR********************/
+
+nav.navbar-fixed-top {
+    background-color: #f5f5f5;
+    border-radius: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.container {
+    height: 50px;
+}
+.navbar-header {
+    color: #333;
+    float: left;
+    height: 50px;
+}
+
+a.navbar-brand {
+    font-size: 18px;
+    text-decoration: none;
+    float: left;
+    padding: 15px 15px;
+    line-height: 20px;
+    color: #777;
+}
+
+.navbar-left{
+    display: block;
+    height: 51px;
+}
+
+ul.nav.navbar-nav{
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    float: left;
+    list-style: none;
+}
+
+.navbar-nav>li>a {
+    color: #777;
+    line-height: 20px;
+    display: block;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.navbar-nav>li>a:hover {
+    color: black;
+    text-decoration: underline; 
+}
+
+ul.nav.navbar-nav.navbar-right {
+    float: right;
+    padding-right: 10px;
+}
+
+a.navbar-brand:hover {
+    color: black;
+    text-decoration: underline;
+}
+.activePage{
+    background-color: rgba(181, 172, 172, 0.19);
+    color: black;
+}
+.activePage a{
+    color: black;
+}
+.navbar-nav>li.activePage>a {
+    color: black;
+}
+/*************FOOTER************/
+footer {
+    bottom: 0;
+    background-color: #f5f5f5;
+    height: 100px;
+    padding: .8em;
+    text-align: center;
+    border-radius: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 1.1rem;
+}
+a.footer {
+    color: rgba(4, 4, 4, 0.66);
+    text-decoration: none;
+}
+a.footer:hover {
+    text-decoration: underline;
+}
+
+/**********PAGE CONTENT********/
+.content{
+    color: black;
+    background-color: #FFFFFF;
+}
+
+.page{
+    width: 55%;
+    margin:auto;
+    padding-top: 15px;
+    background-color: #FFFFFF
+}
+
+/***************SIGN UP FORM**************/
+
+form {
+    border: solid thin black;
+    padding: 1em;
+    padding-bottom: 60px;
+    background-color: rgba(152, 152, 152, 0.2);
+}
+article{
+    width: 50%;
+    margin: auto;
+    min-width: 600px;
+    margin-bottom: 5em;
+}
+label.required{
+    display: block;
+}
+fieldset.text {
+    border: none;
+    clear: both;
+}
+
+fieldset.buttons{
+    border: none;
+    float: left;
+    width: 100%
+}
+
+#btnSubmit {
+    border-radius: 0;
+    background: rgba(41, 111, 6, 1);
+    /* font-family: arial; */
+    font-weight: 500;
+    padding: 4px;
+    border-color: slategray;
+    border-width: 2px;
+    width: 150px;
+    color: white;
+}
+label {
+    padding-top: 10px;
+}
+
+input {
+    font-size: 1.15em;
+    padding: 5px;
+    width: 400px;
+    color: #6f6f6f;
+    box-shadow: inset 0 1px 4px rgba(10, 10, 10, 0.1);
+    border: 1px solid #a5a5a5;
+}
+
+legend {
+    font-size: 1.4em;
+    padding: 0;
+    border-bottom: solid thin #b5b5b5;
+    margin: 0;
+    width: 100%;
+    margin-left: -10px;
+    margin-bottom: 5px;
+}
+input#btnSubmit{
+    margin-right: 20px;
+    float: right;
+   
+}
+.mistake{
+    border: 2px solid red;
+}
+div#errors h2 {
+    font-size: 1.9em;
+}
+
+/*************ABOUT***************/
+img.profile {
+    /* width: 300px; */
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+p.aboutContent {
+    background-color: white;
+}
+div.p>p.aboutContent {
+    background: whitesmoke;
+}
+.aboutProfile {
+    border: 1px solid;
+    border-color: slategray;
+    background: whitesmoke;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin-bottom: 1.111111rem;
+    padding: 1.11111rem;
+    box-sizing: inherit;
+    display: inline-block;
+    /* clear: both; */
+    max-width: 75rem;
+    /* box-sizing: inherit; */
+    /* padding-bottom: 8em; */
+}
+
+.pic {
+    margin-top: 0;
+    float: left;
+    width: 33.3333%;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+figure{
+    margin:1em;
+}
+.aboutContent>a {
+    text-decoration: none;
+}
+.aboutContent>a:hover {
+    text-decoration: underline;
+}
+
+/***********REVIEWS***********/
+input.radType {
+    display: inline-block;
+    width: 13px;
+    box-shadow: none;
+}
+label.rad {
+    display: block;
+    color: black;
+    padding-right: 15px;
+    
+    padding-top: 0;
+}
+fieldset.radio {
+    border: none;
+}
+fieldset.textArea {
+    border: none;
+}
+textarea#txtComments {
+    resize: vertical;
+    width: 400px;
+}
+
+div.stars {
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+  float: right;
+  padding: 3px;
+  font-size: 26px;
+  color: #444;
+  transition: all .1s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+  text-shadow: 0 0 20px black;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { 
+    color: #ff2422;
+    text-shadow: 0 0 20px slategray;
+}
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+
+fieldset.rating {
+    border: none;
+    margin-top: 10px;
+}
+
+input#checkbox {
+    display: inline-block;
+    box-shadow: none;
+    margin: 0;
+    width: 13px;
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+label.chk {
+    display: block;
+}
+
+fieldset.checkbox {
+    border: none;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+/*******GIVE A RIDE/GET A RIDE***********/
+fieldset.date {
+    border: none;
+}
+
+input.startTime{
+    width: 110px;
+    font-size: 1em;
+}
+
+input.endTime {
+    width: 110px;
+    font-size: 1em;
+}
+
+p.time1 {
+    display: inline-block;
+    background: none;
+    padding-right: 5px;
+    padding-left: 4px;
+    margin-top: 10px;
+}
+
+p.time {
+    float: left;
+    background: none;
+    padding-right: 5px;
+    margin-top: 10px;
+}
+input[type="date"] {
+    margin-top: 4px;
+    margin-bottom: 5px;
+    width: 345px;
+}
+fieldset.lists{
+    border: none;
+}
+div#div1 {
+    padding-top: 10px;
+}
+select#lstBeer {
+    font-size: 1.15em;
+    width: 95%;
+    margin-top: 5px;
+    padding: 5px;
+    color: #6f6f6f;
+}

@@ -16,6 +16,7 @@
 */
 -->
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 
   <head>
@@ -95,6 +96,32 @@
         ?>
       </div>
     </div> <!-- !End Container>
+=======
+<html>
+<?php include "top.php" ?>
+<body>
+    <!-- Main Nav -->
+    <nav class="blue">
+      <a href="?" class="brand-logo">PigPen</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="?Page=registration"><i class="material-icons">settings</i></a></li>
+      </ul>
+    </nav> <!-- !End nav -->
+    
+    <!-- Container for services -->
+    <div class="container">
+      <div class="row">
+        <?php
+          if (isset($_GET['Page'])) {
+            include $_GET['Page'] . ".php";
+          } else {
+            include "forum.php";
+          }
+          
+        ?>
+      </div>
+    </div> <!-- !End Container>
+>>>>>>> 6712db5a72bb46a3776f21dccb0925345379aee0
     
 
 	

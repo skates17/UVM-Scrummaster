@@ -1,5 +1,4 @@
 <?php
-//include "top.php";
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
 // SECTION: 1 Initialize variables
@@ -107,7 +106,7 @@ if (isset($_POST["btnSubmit"])) {
     $style = htmlentities($_POST["radType"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $style;
     
-    $rating=  htmlentities($_POST["star"], ENT_QUOTES, "UTF-8");
+    $rating= htmlentities($_POST["star"], ENT_QUOTES, "UTF-8");
     $dataRecord[]= $rating;
     
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -337,7 +336,8 @@ if (isset($_POST["btnSubmit"])) {
 ?>
 
 <article id="main">
-	<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
+	<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/Jonscss.css">-->
     <?php
     //####################################
     //
@@ -398,6 +398,7 @@ if (isset($_POST["btnSubmit"])) {
        */
     ?>
 
+<<<<<<< HEAD
     <form id="frmRegister"
           method="post">
                 <fieldset class="radio">
@@ -438,6 +439,25 @@ if (isset($_POST["btnSubmit"])) {
                     
                     <label class="required" for="txtEmail">Your Email*
                         <br>
+=======
+    <form id="frmRegister" method="post">
+    <div class="row">
+        <div class="input-field col m6 s6">
+            <input type="radio" name="radType" value="Cleanee" <?php if ($style == "Cleanee") print 'checked' ?> tabindex="330"/>
+            <label class="rad">Cleanee</label>
+        </div>
+        <div class="input-field col m6 s6">
+            <input type="radio" name="radType" value="Cleaner" <?php if ($style == "Cleaner") print 'checked' ?> tabindex="340">
+            <label class="rad">Cleaner</label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                    <input id="txtName" maxlength="45" name="txtName" type="text" required value="<?php print $Name; ?>">
+                    <label for="txtName">Reviewee's Email *</label>
+            </div>
+        </div>
+            <label for="txtEmail">Your Email*</label>
+>>>>>>> 6712db5a72bb46a3776f21dccb0925345379aee0
                         <input 
                                <?php if ($emailERROR) print 'class="mistake"'; ?>
                                id="txtEmail"
@@ -448,14 +468,8 @@ if (isset($_POST["btnSubmit"])) {
                                tabindex="120"
                                type="text"
                                value="<?php print $email; ?>"
-                               readonly
-                        >
-                    </label>
+                               readonly>
                     
-                    
-                </fieldset> <!-- ends contact -->
-                
-                <fieldset class="rating">
                     <legend>Rating</legend>
                 <div class="stars">
                     <input class="star star-5" id="star-5" type="radio" name="star" value="5" <?php if ($rating == "5") print 'checked' ?>/>
@@ -469,16 +483,10 @@ if (isset($_POST["btnSubmit"])) {
                     <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
                     <label class="star star-1" for="star-1"></label>
                 </div>
-                </fieldset>
-                
-                
-                
-                <fieldset class="textArea">
                     
                     
                     <legend>Comments</legend>
                 <textarea id="txtComments" name="txtComments" tabindex="600" onfocus="this.select()"></textarea>
-                </fieldset>
                 
                 <fieldset class="checkbox <?php if ($activityERROR) print ' mistake'; ?>">
                     <legend>Description</legend>
