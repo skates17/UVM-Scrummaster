@@ -26,7 +26,7 @@ include "lib/constants.php";
 
         print "<!-- require Database.php sdfea -->";
 
-        require_once(BIN_PATH . '/Database.php');
+        require_once(__DIR__ . '/Database.php');
 
         // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
         //
