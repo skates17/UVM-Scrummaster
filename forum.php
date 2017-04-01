@@ -14,7 +14,7 @@ foreach($info as $arrayRec){
 	print'<div class="col s12 m4">';
 		print'<div class="forumPost card">';
 			print'<div class="card-content">';
-				print'<div class="row">'
+				print'<div class="row">';
 				print'<div class="heading">';
 					print'<a href="?Page=users&a='.$arrayRec['fldUsername'].'"><h2 class="card-title">'.$arrayRec['fldTitle'].'</h2></a>';
 					print'<h6>'.$arrayRec['fnkUsername'].'</h6>';
