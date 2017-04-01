@@ -25,7 +25,7 @@ $dataRecord = array();
        
        
       <div class="row">
-          <form method ="POST" class="col s12" action="registration_success.php">
+          <form method ="POST" class="col s12" action="registrationSuccess.php">
         <div class="row">
           <i class="material-icons prefix">phone</i>
           <input id="telephone" type="tel" class="validate">
