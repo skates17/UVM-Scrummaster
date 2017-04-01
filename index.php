@@ -36,7 +36,6 @@
           } else {
             include "forum.php";
           }
-          
         ?>
       </div>
     </div> <!-- !End Container>
