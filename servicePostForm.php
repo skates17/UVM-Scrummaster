@@ -56,7 +56,7 @@
   ?>
 <?php
 if (isset($_POST['push']) && ($valid)) {
-$query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation, fldTitle)";
+$query = "INSERT INTO tblForum (fnkUsername, fldPrice, fldComment, fldLocation, fldTitle)";
  //    $query = "INSERT INTO tblUsers (-, -, -, -, -)";
 //get data from and assign to variables
     $title = $_POST["title"];
@@ -67,7 +67,7 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 
     $values = ' VALUES ("' . $user . ' ","' . $price . ' ","' .  $disc . ' ","' . $location. ' ","' .  $title . '")';
     $query .=$values;
-    $results = $thisDatabaseWriter->select($query, "", 0, 0, 10, 0, false, false);
+    $results = $thisDatabaseWriter->insert($query, "", 0, 0, 10, 0, false, false);
 
 
 } 
@@ -79,7 +79,7 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 		<div class="container">
 			<h2 class="uvm-post-head">Service post</h2>
 			<div class="uvm-add-post">
-				<form>
+				<form id="upload"  method="POST" enctype="multipart/form-data">
 					<label>Select Category <span>*</span></label>
 					<select class="">
 					  <option>Select Category</option>
@@ -100,7 +100,7 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 				<div class="upload-ad-photos">
 				<label>Photos for your add :</label>	
 					<div class="photos-upload-view">
-						<form id="upload" action="servicePostForm.php" method="POST" enctype="multipart/form-data">
+						
 
 						<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
 
@@ -113,7 +113,7 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 							<button type="submit">Upload Files</button>
 						</div>
 
-						</form>
+						
 
 						<div id="messages">
 						<p>Status Messages</p>
@@ -123,7 +123,7 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 						<script src="js/dropfile.js"></script>
 				</div>
 					<div class="personal-details">
-					<form>
+					
 					
 						<label>Price <span>*</span></label>
 						<input type="text" class="name" name="price" placeholder="$$$$$" value="<?php echo $price; ?>">
@@ -135,8 +135,9 @@ $query = "INSERT INTO 'tblForum' (fnkUsername, fldPrice, fldComment, fldLocation
 
 					<input type="submit" name="push" value="POST">					
 					<div class="clearfix"></div>
-					</form>
+					
 					</div>
+</form>
 			</div>
 		</div>	
 	</div>
