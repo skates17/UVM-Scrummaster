@@ -25,21 +25,13 @@
 
     print "<!-- make Database connections -->";
     $dbUserName = 'bb0f7db58de207';
-    $whichPass = "r"; //flag for which one to use
     $dbName = 'ad_9e7e960f8cf9a6b';
-
-    /*"credentials": {
-                "jdbcUrl": "jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/ad_9e7e960f8cf9a6b?user=bb0f7db58de207&password=9df46417",
-                "uri": "mysql://bb0f7db58de207:9df46417@us-cdbr-iron-east-03.cleardb.net:3306/ad_9e7e960f8cf9a6b?reconnect=true",
-                "name": "ad_9e7e960f8cf9a6b",
-                "hostname": "us-cdbr-iron-east-03.cleardb.net",
-                "port": "3306",
-                "username": "bb0f7db58de207",
-                "password": "9df46417"*/
-
+    
+    // Reader
+    $whichPass = "r";
     $thisDatabaseReader = new Database($dbUserName, $whichPass, $dbName);
-
-    $dbUserName = 'bb0f7db58de207';
+    
+    // Writer
     $whichPass = "w";
     $thisDatabaseWriter = new Database($dbUserName, $whichPass, $dbName);
 

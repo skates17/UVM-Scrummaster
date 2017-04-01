@@ -1,10 +1,11 @@
 <?php
+include 'top.php';
+$a=$_GET("a");
 
-$a="aram1";
-$specificQuery="SELECT pmkReviewId, fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId, fnkRevieweesNetId, fldApproved";
-$specificQuery.=" FROM tblReviews WHERE fnkRevieweesId= ?" ;
-$data=array($a);
-$QueryInfo=$thisDatabaseReader->select($reviewQuery, $data,1,1,0,0,false,false);
+$specificQuery="SELECT pmkReviewId, fldStatus, fldRating, fldComments, fldNice, fldFunny, fldGoodCleaner, fldGoodMusic, fldBadCleaner, fldUncomfortable, fldMean, fldLate, fnkNetId, fnkRevieweesNetId";
+$specificQuery.=" FROM tblReviews WHERE fnkNetId = ?" ;
+
+$QueryInfo=$thisDatabaseReader->select($specificQuery, $a,1,1,0,0,false,false);
 ?>
 <div class="page">
 <?php
@@ -12,27 +13,13 @@ if(!empty($QueryInfo)){
     print'<h2 class="home">Reviews of You!</h2>';
         
         foreach ($QueryInfo as $arrayRec){
-            if($arrayRec['fldApproved']=='-1' AND $i==0){
-                print'<h2 class="home">Pending Reviews</h2>';
-            }
-            if($arrayRec['fldApproved']=='0' AND $j==0){
-                print'<h2 class="home">Declined Reviews</h2>';
-                $j++;
-            }
-            //print'<div id="review" class="review">';
             print'<div class="heading">';
             print'<h5 class="heading">'.$arrayRec['fnkRevieweesNetId'].'</h5><h6 class=status>';
-            if($arrayRec['fldStatus']=='1'){
-                print ' - Cleanee';
-            }
-            else{
-                print' - Cleaner';
-            }
             print'</h6>';
             print'</div>';
             print'<div class = "reviewLeft">';
             
-            print'<img id="ratingPic" src="images/'.$arrayRec['fldRating'].'Star.png"/>';
+            //print'<img id="ratingPic" src="images/'.$arrayRec['fldRating'].'Star.png"/>';
             print'<div class="divAttrib">';
             if($arrayRec['fldNice']=="1"){
                 print'<p class="attributes">Nice</p>';
