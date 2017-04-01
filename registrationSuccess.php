@@ -1,6 +1,4 @@
-<?php
-include top.php;
-?>
+
 
 <html>
    <head>
